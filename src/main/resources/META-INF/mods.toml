@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+
+[[mods]]
+modId="cool_mod_thats_actually_cool"
+version="1.0.0"
+displayName="Cool Mod that's Actually Cool"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://mcreator.net"
+authors="Happymonkey, MCreator"
+
+[[dependencies.cool_mod_thats_actually_cool]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

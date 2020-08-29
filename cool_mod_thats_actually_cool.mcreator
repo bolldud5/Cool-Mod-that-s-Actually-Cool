@@ -1,0 +1,26 @@
+{
+  "id_map": {},
+  "mod_elements": [],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "workspaceSettings": {
+    "modid": "cool_mod_thats_actually_cool",
+    "modName": "Cool Mod that\u0027s Actually Cool",
+    "version": "1.0.0",
+    "author": "Happymonkey, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.15.2",
+    "modElementsPackage": "net.mcreator.coolmodthatsactuallycool",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000432115
+}
