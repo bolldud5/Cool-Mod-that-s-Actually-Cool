@@ -21,9 +21,7 @@ public class BloteMeatFoodEatenProcedure extends CoolModThatsActuallyCoolModElem
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((Math.random() < 0.33)) {
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(BloatedEffectPotion.potion, (int) 60, (int) 1));
-		}
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(BloatedEffectPotion.potion, (int) 180, (int) 1));
 	}
 }

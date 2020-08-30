@@ -40,7 +40,7 @@ public class BloteMeatItem extends CoolModThatsActuallyCoolModElements.ModElemen
 
 		@Override
 		public int getUseDuration(ItemStack stack) {
-			return 48;
+			return 100;
 		}
 
 		@Override

@@ -2,9 +2,9 @@
   "_fv": 10,
   "_type": "gun",
   "definition": {
-    "renderType": 0,
-    "texture": "hamsterlauncher_icon",
-    "customModelName": "Normal",
+    "renderType": 1,
+    "texture": "hamsterlauncher_v2",
+    "customModelName": "hamster_launcher:default",
     "name": "Hamster Launcher",
     "specialInfo": [],
     "creativeTab": {

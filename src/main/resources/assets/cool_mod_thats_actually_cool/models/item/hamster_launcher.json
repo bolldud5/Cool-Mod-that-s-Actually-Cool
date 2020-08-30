@@ -1,42 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "cool_mod_thats_actually_cool:custom/hamster_launcher",
   "textures": {
-    "layer0": "cool_mod_thats_actually_cool:items/hamsterlauncher_icon"
-  },
-  "display": {
-    "thirdperson_righthand": {
-      "rotation": [
-        -80,
-        260,
-        -40
-      ],
-      "translation": [
-        -1,
-        -2,
-        2.5
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ]
-    },
-    "thirdperson_lefthand": {
-      "rotation": [
-        -80,
-        -280,
-        40
-      ],
-      "translation": [
-        -1,
-        -2,
-        2.5
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ]
-    }
+    "2": "cool_mod_thats_actually_cool:blocks/hamsterlauncher_v2",
+    "particle": "cool_mod_thats_actually_cool:items/hamsterlauncher_v2"
   }
 }
