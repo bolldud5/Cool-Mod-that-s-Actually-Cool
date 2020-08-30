@@ -34,5 +34,23 @@
         "stream": false
       }
     ]
+  },
+  "mob.hamster.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:squaek2",
+        "stream": false
+      }
+    ]
+  },
+  "mob.hamster.death": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:squeak3",
+        "stream": false
+      }
+    ]
   }
 }
