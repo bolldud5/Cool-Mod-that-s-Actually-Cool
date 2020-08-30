@@ -1,1 +1,11 @@
-{}
+{
+  "program1": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:mind-in-a-program-medley",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -47,6 +47,8 @@ public class CoolModThatsActuallyCoolModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public CoolModThatsActuallyCoolModElements() {
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "program1"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "program1")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("cool_mod_thats_actually_cool").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

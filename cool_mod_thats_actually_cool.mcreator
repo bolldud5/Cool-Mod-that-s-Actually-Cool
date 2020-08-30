@@ -1,10 +1,29 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "PROGRAMMedley",
+      "type": "musicdisc",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "program_medley"
+    }
+  ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "program1",
+      "file": "mind-in-a-program-medley",
+      "category": "record"
+    }
+  ],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
+      "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley"
+    }
   },
   "workspaceSettings": {
     "modid": "cool_mod_thats_actually_cool",

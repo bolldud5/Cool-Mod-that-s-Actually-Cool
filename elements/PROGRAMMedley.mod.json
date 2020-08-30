@@ -1,0 +1,17 @@
+{
+  "_fv": 10,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "program_1_disk",
+    "name": "PROGRAM Medley",
+    "description": "Mind in a PROGRAM Medley",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "music": {
+      "value": "CUSTOM:program1"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}
