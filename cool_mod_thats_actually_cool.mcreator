@@ -9,6 +9,87 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "program_medley"
+    },
+    {
+      "name": "BloatedEffectOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloated_effect_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloatedEffect",
+      "type": "potion",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloated_effect"
+    },
+    {
+      "name": "BloteMeatFoodEaten",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote_meat_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloteMeatItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote_meat_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloteMeat",
+      "type": "food",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote_meat"
     }
   ],
   "variable_elements": [],
@@ -17,12 +98,23 @@
       "name": "program1",
       "file": "mind-in-a-program-medley",
       "category": "record"
+    },
+    {
+      "name": "item.blotemeat.sizzle",
+      "file": "small-fireball-soundbible.com-1381880822",
+      "category": "ambient"
     }
   ],
   "language_map": {
     "en_us": {
+      "item.cool_mod_thats_actually_cool.blote_meat": "Blote Meat",
+      "item.minecraft.lingering_potion.effect.bloated_effect": "Lingering Bloated",
       "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
-      "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley"
+      "item.minecraft.potion.effect.bloated_effect": "Bloated",
+      "item.minecraft.tipped_arrow.effect.bloated_effect": "Arrow of Bloated",
+      "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley",
+      "effect.bloated_effect": "Bloating",
+      "item.minecraft.splash_potion.effect.bloated_effect": "Splash Bloated"
     }
   },
   "workspaceSettings": {
