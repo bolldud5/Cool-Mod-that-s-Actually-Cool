@@ -3,8 +3,8 @@
   "_type": "gun",
   "definition": {
     "renderType": 1,
-    "texture": "hamsterlauncher_v2",
-    "customModelName": "hamsterlauncher:default",
+    "texture": "launcher",
+    "customModelName": "hamsterlauncher2:default",
     "name": "Hamster Launcher",
     "specialInfo": [],
     "creativeTab": {
@@ -14,7 +14,7 @@
     "ammoItem": {
       "value": "CUSTOM:HamsterPellet"
     },
-    "shootConstantly": false,
+    "shootConstantly": true,
     "usageCount": 10000,
     "actionSound": {
       "value": "entity.blaze.shoot"

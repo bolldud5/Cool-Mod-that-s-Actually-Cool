@@ -1,13 +1,12 @@
 {
   "credit": "Made with Blockbench",
-  "parent": "_Hamster_Launcher_1",
+  "parent": "HamsterLauncher",
   "texture_size": [
     128,
     128
   ],
   "elements": [
     {
-      "name": "cube1",
       "from": [
         4,
         0,
@@ -85,7 +84,6 @@
       }
     },
     {
-      "name": "cube2",
       "from": [
         4,
         1,
@@ -163,7 +161,6 @@
       }
     },
     {
-      "name": "cube3",
       "from": [
         11,
         1,
@@ -241,7 +238,6 @@
       }
     },
     {
-      "name": "cube4",
       "from": [
         5,
         7,
@@ -319,7 +315,6 @@
       }
     },
     {
-      "name": "cube5",
       "from": [
         5,
         0,
@@ -397,7 +392,6 @@
       }
     },
     {
-      "name": "cube6",
       "from": [
         5,
         1,
@@ -475,7 +469,6 @@
       }
     },
     {
-      "name": "cube7",
       "from": [
         5,
         8,
@@ -564,7 +557,7 @@
   },
   "groups": [
     {
-      "name": "HamsterLauncher",
+      "name": "Container",
       "origin": [
         8,
         8,

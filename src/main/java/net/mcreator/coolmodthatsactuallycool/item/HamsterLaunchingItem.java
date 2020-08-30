@@ -52,12 +52,12 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
-public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.ModElement {
-	@ObjectHolder("cool_mod_thats_actually_cool:hamster_launcher")
+public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.ModElement {
+	@ObjectHolder("cool_mod_thats_actually_cool:hamster_launching")
 	public static final Item block = null;
-	@ObjectHolder("cool_mod_thats_actually_cool:entitybullethamster_launcher")
+	@ObjectHolder("cool_mod_thats_actually_cool:entitybullethamster_launching")
 	public static final EntityType arrow = null;
-	public HamsterLauncherItem(CoolModThatsActuallyCoolModElements instance) {
+	public HamsterLaunchingItem(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 12);
 	}
 
@@ -66,7 +66,7 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 				.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-				.size(0.5f, 0.5f)).build("entitybullethamster_launcher").setRegistryName("entitybullethamster_launcher"));
+				.size(0.5f, 0.5f)).build("entitybullethamster_launching").setRegistryName("entitybullethamster_launching"));
 	}
 
 	@Override
@@ -77,7 +77,7 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(10000));
-			setRegistryName("hamster_launcher");
+			setRegistryName("hamster_launching");
 		}
 
 		@Override
@@ -97,7 +97,8 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 		}
 
 		@Override
-		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
+		public void onUsingTick(ItemStack itemstack, LivingEntity entityLiving, int count) {
+			World world = entityLiving.world;
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
 				double x = entity.getPosX();
@@ -140,6 +141,7 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 							HamsterLauncherRangedItemUsedProcedure.executeProcedure($_dependencies);
 						}
 					}
+					entity.stopActiveHand();
 				}
 			}
 		}
