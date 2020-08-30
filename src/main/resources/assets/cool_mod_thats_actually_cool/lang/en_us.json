@@ -1,9 +1,12 @@
 {
+  "item.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert Spawn Egg",
   "item.cool_mod_thats_actually_cool.blote_meat": "Blote Meat",
   "item.minecraft.lingering_potion.effect.bloated_effect": "Lingering Bloated",
   "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
+  "item.cool_mod_thats_actually_cool.cactus_spine_weapon": "Cactus Spine Weapon",
   "item.minecraft.potion.effect.bloated_effect": "Bloated",
   "item.minecraft.tipped_arrow.effect.bloated_effect": "Arrow of Bloated",
+  "entity.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert",
   "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley",
   "effect.bloated_effect": "Bloating",
   "item.minecraft.splash_potion.effect.bloated_effect": "Splash Bloated"

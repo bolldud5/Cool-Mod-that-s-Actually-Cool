@@ -16,5 +16,23 @@
         "stream": false
       }
     ]
+  },
+  "fortress_death": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:shell_break",
+        "stream": false
+      }
+    ]
+  },
+  "mob.sandsnail.ambient": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:zapsplat_household_necklace_beaded_set_down_in_ceramic_bowl_or_surface_001_39946",
+        "stream": false
+      }
+    ]
   }
 }

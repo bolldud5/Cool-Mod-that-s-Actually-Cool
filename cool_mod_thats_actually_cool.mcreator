@@ -90,6 +90,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "blote_meat"
+    },
+    {
+      "name": "CactusSpineWeapon",
+      "type": "gun",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cactus_spine_weapon"
+    },
+    {
+      "name": "SandSnail",
+      "type": "mob",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sand_snail"
     }
   ],
   "variable_elements": [],
@@ -103,15 +121,28 @@
       "name": "item.blotemeat.sizzle",
       "file": "small-fireball-soundbible.com-1381880822",
       "category": "ambient"
+    },
+    {
+      "name": "fortress_death",
+      "file": "shell_break",
+      "category": "master"
+    },
+    {
+      "name": "mob.sandsnail.ambient",
+      "file": "zapsplat_household_necklace_beaded_set_down_in_ceramic_bowl_or_surface_001_39946",
+      "category": "neutral"
     }
   ],
   "language_map": {
     "en_us": {
+      "item.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert Spawn Egg",
       "item.cool_mod_thats_actually_cool.blote_meat": "Blote Meat",
       "item.minecraft.lingering_potion.effect.bloated_effect": "Lingering Bloated",
       "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
+      "item.cool_mod_thats_actually_cool.cactus_spine_weapon": "Cactus Spine Weapon",
       "item.minecraft.potion.effect.bloated_effect": "Bloated",
       "item.minecraft.tipped_arrow.effect.bloated_effect": "Arrow of Bloated",
+      "entity.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert",
       "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley",
       "effect.bloated_effect": "Bloating",
       "item.minecraft.splash_potion.effect.bloated_effect": "Splash Bloated"

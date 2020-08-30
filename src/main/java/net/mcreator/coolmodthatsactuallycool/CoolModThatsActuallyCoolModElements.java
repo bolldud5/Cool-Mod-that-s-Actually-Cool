@@ -51,6 +51,10 @@ public class CoolModThatsActuallyCoolModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "program1")));
 		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "item.blotemeat.sizzle"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "item.blotemeat.sizzle")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "fortress_death"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "fortress_death")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.sandsnail.ambient"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.sandsnail.ambient")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("cool_mod_thats_actually_cool").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
