@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "_Hamster_Launcher_1",
+	"parent": "HamsterLauncher",
 	"texture_size": [128, 128],
 	"textures": {
 		"2": "block/HamsterLauncher_V2",
@@ -8,7 +8,6 @@
 	},
 	"elements": [
 		{
-			"name": "cube1",
 			"from": [4, 0, 10],
 			"to": [12, 8, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [18, 8, 19]},
@@ -22,7 +21,6 @@
 			}
 		},
 		{
-			"name": "cube2",
 			"from": [4, 1, -16],
 			"to": [5, 7, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [12, 9, 17]},
@@ -36,7 +34,6 @@
 			}
 		},
 		{
-			"name": "cube3",
 			"from": [11, 1, -16],
 			"to": [12, 7, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [19, 9, 17]},
@@ -50,7 +47,6 @@
 			}
 		},
 		{
-			"name": "cube4",
 			"from": [5, 7, -16],
 			"to": [11, 8, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [13, 15, 17]},
@@ -64,7 +60,6 @@
 			}
 		},
 		{
-			"name": "cube5",
 			"from": [5, 0, -16],
 			"to": [11, 1, 10],
 			"rotation": {"angle": 0, "axis": "y", "origin": [13, 8, 17]},
@@ -78,7 +73,6 @@
 			}
 		},
 		{
-			"name": "cube6",
 			"from": [5, 1, -8],
 			"to": [11, 7, -7],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15, 9, 0]},
@@ -92,7 +86,6 @@
 			}
 		},
 		{
-			"name": "cube7",
 			"from": [5, 8, 5],
 			"to": [11, 12, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [13, 16, 18]},
@@ -113,7 +106,7 @@
 	},
 	"groups": [
 		{
-			"name": "HamsterLauncher",
+			"name": "Container",
 			"origin": [8, 8, 8],
 			"children": [0, 1, 2, 3, 4, 5, 6]
 		}

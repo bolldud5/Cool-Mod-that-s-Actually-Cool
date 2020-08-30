@@ -290,7 +290,7 @@
     {
       "name": "HamsterLauncher",
       "type": "gun",
-      "sortid": 8,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},

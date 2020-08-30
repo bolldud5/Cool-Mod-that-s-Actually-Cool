@@ -23,12 +23,9 @@ import net.minecraft.item.ShootableItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
@@ -54,8 +51,6 @@ import java.util.HashMap;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-import com.google.common.collect.Multimap;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.ModElement {
 	@ObjectHolder("cool_mod_thats_actually_cool:hamster_launcher")
@@ -63,7 +58,7 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 	@ObjectHolder("cool_mod_thats_actually_cool:entitybullethamster_launcher")
 	public static final EntityType arrow = null;
 	public HamsterLauncherItem(CoolModThatsActuallyCoolModElements instance) {
-		super(instance, 8);
+		super(instance, 12);
 	}
 
 	@Override
@@ -102,18 +97,6 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 		}
 
 		@Override
-		public Multimap<String, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot) {
-			Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot);
-			if (slot == EquipmentSlotType.MAINHAND) {
-				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(),
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "ranged_item_damage", (double) -2, AttributeModifier.Operation.ADDITION));
-				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
-						new AttributeModifier(ATTACK_SPEED_MODIFIER, "ranged_item_attack_speed", -2.4, AttributeModifier.Operation.ADDITION));
-			}
-			return multimap;
-		}
-
-		@Override
 		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
@@ -133,7 +116,7 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 						}
 					}
 					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 3f, 10, 1);
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 5f, 5, 1);
 						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
@@ -314,9 +297,9 @@ public class HamsterLauncherItem extends CoolModThatsActuallyCoolModElements.Mod
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 3f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 5f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(10);
+		entityarrow.setDamage(5);
 		entityarrow.setKnockbackStrength(1);
 		entityarrow.setIsCritical(true);
 		entity.world.addEntity(entityarrow);
