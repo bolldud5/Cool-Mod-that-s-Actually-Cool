@@ -14,10 +14,10 @@
     "ammoItem": {
       "value": "CUSTOM:HamsterPellet"
     },
-    "shootConstantly": true,
+    "shootConstantly": false,
     "usageCount": 10000,
     "actionSound": {
-      "value": "entity.blaze.shoot"
+      "value": "entity.ghast.shoot"
     },
     "hasGlow": false,
     "enableMeleeDamage": false,

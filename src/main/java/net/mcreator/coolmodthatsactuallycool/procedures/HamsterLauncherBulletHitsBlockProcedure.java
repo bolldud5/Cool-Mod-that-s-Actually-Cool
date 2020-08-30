@@ -43,7 +43,7 @@ public class HamsterLauncherBulletHitsBlockProcedure extends CoolModThatsActuall
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof World && !world.getWorld().isRemote) {
 			Entity entityToSpawn = new HamsterEntity.CustomEntity(HamsterEntity.entity, world.getWorld());
-			entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+			entityToSpawn.setLocationAndAngles((x - 1), y, (z - 1), world.getRandom().nextFloat() * 360F, 0);
 			if (entityToSpawn instanceof MobEntity)
 				((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
 						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);

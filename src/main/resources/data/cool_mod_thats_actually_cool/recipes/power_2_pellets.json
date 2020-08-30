@@ -1,12 +1,13 @@
 {
   "group": "cool_mod_thats_actually_cool",
-  "type": "minecraft:smelting",
-  "experience": 3,
-  "cookingtime": 100,
-  "ingredient": {
-    "item": "cool_mod_thats_actually_cool:power_source"
-  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cool_mod_thats_actually_cool:power_source"
+    }
+  ],
   "result": {
-    "item": "cool_mod_thats_actually_cool:hamster_pellet"
+    "item": "cool_mod_thats_actually_cool:hamster_pellet",
+    "count": 1
   }
 }
