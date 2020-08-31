@@ -24,22 +24,22 @@
         "value": "void"
       }
     ],
-    "worldGenType": "Nether like gen",
+    "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.BEDROCK"
+      "value": "CUSTOM:AngeredObsidian"
     },
     "fluidBlock": {
-      "value": "Blocks.BEDROCK"
+      "value": "CUSTOM:Glowl"
     },
     "airColor": {
-      "value": -10027009,
+      "value": -16777216,
       "falpha": 0.0
     },
     "canRespawnHere": false,
-    "hasFog": false,
+    "hasFog": true,
     "hasWeather": false,
-    "isDark": false,
-    "doesWaterVaporize": true,
+    "isDark": true,
+    "doesWaterVaporize": false,
     "sleepResult": "BED_EXPLODES",
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false
