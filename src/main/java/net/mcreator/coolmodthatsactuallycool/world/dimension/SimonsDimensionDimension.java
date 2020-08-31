@@ -25,16 +25,13 @@ import net.minecraft.world.gen.layer.traits.IC0Transformer;
 import net.minecraft.world.gen.layer.ZoomLayer;
 import net.minecraft.world.gen.layer.Layer;
 import net.minecraft.world.gen.layer.IslandLayer;
-import net.minecraft.world.gen.feature.ProbabilityConfig;
-import net.minecraft.world.gen.carver.CaveWorldCarver;
 import net.minecraft.world.gen.area.LazyArea;
 import net.minecraft.world.gen.area.IAreaFactory;
-import net.minecraft.world.gen.OverworldGenSettings;
-import net.minecraft.world.gen.OverworldChunkGenerator;
+import net.minecraft.world.gen.NetherGenSettings;
+import net.minecraft.world.gen.NetherChunkGenerator;
 import net.minecraft.world.gen.LazyAreaLayerContext;
 import net.minecraft.world.gen.INoiseRandom;
 import net.minecraft.world.gen.IExtendedNoiseRandom;
-import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.dimension.Dimension;
@@ -59,6 +56,7 @@ import net.minecraft.util.CachedBlockInfo;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
@@ -71,8 +69,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.coolmodthatsactuallycool.item.SimonsDimensionItem;
-import net.mcreator.coolmodthatsactuallycool.block.GlowlBlock;
-import net.mcreator.coolmodthatsactuallycool.block.AngeredObsidianBlock;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 
 import javax.annotation.Nullable;
@@ -669,8 +665,8 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 	public static class CustomDimension extends Dimension {
 		private BiomeProviderCustom biomeProviderCustom = null;
 		public CustomDimension(World world, DimensionType type) {
-			super(world, type, 0);
-			this.nether = false;
+			super(world, type, 0.5f);
+			this.nether = true;
 		}
 
 		@Override
@@ -694,7 +690,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public Vec3d getFogColor(float cangle, float ticks) {
-			return new Vec3d(0.129411764706, 0.105882352941, 0.074509803922);
+			return new Vec3d(0.4, 1, 1);
 		}
 
 		@Override
@@ -752,22 +748,23 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 		}
 	}
 
-	public static class ChunkProviderModded extends OverworldChunkGenerator {
-		public ChunkProviderModded(IWorld world, BiomeProvider provider) {
-			super(world, provider, new OverworldGenSettings() {
+	public static class ChunkProviderModded extends NetherChunkGenerator {
+		public ChunkProviderModded(World world, BiomeProvider provider) {
+			super(world, provider, new NetherGenSettings() {
 				public BlockState getDefaultBlock() {
-					return AngeredObsidianBlock.block.getDefaultState();
+					return Blocks.BEDROCK.getDefaultState();
 				}
 
 				public BlockState getDefaultFluid() {
-					return GlowlBlock.block.getDefaultState();
+					return Blocks.BEDROCK.getDefaultState();
 				}
 			});
-			this.randomSeed.skip(5349);
+			this.randomSeed.skip(9716);
 		}
 
 		@Override
-		public void spawnMobs(ServerWorld worldIn, boolean spawnHostileMobs, boolean spawnPeacefulMobs) {
+		public List<Biome.SpawnListEntry> getPossibleCreatures(EntityClassification creatureType, BlockPos pos) {
+			return this.world.getBiome(pos).getSpawns(creatureType);
 		}
 	}
 
@@ -780,22 +777,9 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 
 	public static class BiomeProviderCustom extends BiomeProvider {
 		private Layer genBiomes;
-		private static boolean biomesPatched = false;
 		public BiomeProviderCustom(World world) {
 			super(new HashSet<Biome>(Arrays.asList(dimensionBiomes)));
 			this.genBiomes = getBiomeLayer(world.getSeed());
-			if (!biomesPatched) {
-				for (Biome biome : this.biomes) {
-					biome.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(new CaveWorldCarver(ProbabilityConfig::deserialize, 256) {
-						{
-							carvableBlocks = ImmutableSet.of(AngeredObsidianBlock.block.getDefaultState().getBlock(),
-									biome.getSurfaceBuilder().getConfig().getTop().getBlock(),
-									biome.getSurfaceBuilder().getConfig().getUnder().getBlock());
-						}
-					}, new ProbabilityConfig(0.14285715f)));
-				}
-				biomesPatched = true;
-			}
 		}
 
 		public Biome getNoiseBiome(int x, int y, int z) {
