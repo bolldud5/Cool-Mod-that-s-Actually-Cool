@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "cool_mod_thats_actually_cool:blocks/glowl_still_animated",
-    "particle": "cool_mod_thats_actually_cool:blocks/glowl_still_animated"
+    "all": "cool_mod_thats_actually_cool:blocks/angered_obsidian1",
+    "particle": "cool_mod_thats_actually_cool:blocks/angered_obsidian1"
   }
 }

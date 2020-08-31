@@ -32,14 +32,14 @@
       "value": "CUSTOM:Glowl"
     },
     "airColor": {
-      "value": -14607597,
+      "value": -16777216,
       "falpha": 0.0
     },
     "canRespawnHere": false,
-    "hasFog": false,
+    "hasFog": true,
     "hasWeather": false,
     "isDark": true,
-    "doesWaterVaporize": true,
+    "doesWaterVaporize": false,
     "sleepResult": "BED_EXPLODES",
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false

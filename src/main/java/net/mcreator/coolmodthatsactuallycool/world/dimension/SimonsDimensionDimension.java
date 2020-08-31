@@ -694,7 +694,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public Vec3d getFogColor(float cangle, float ticks) {
-			return new Vec3d(0.129411764706, 0.105882352941, 0.074509803922);
+			return new Vec3d(0, 0, 0);
 		}
 
 		@Override
@@ -718,7 +718,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 		@OnlyIn(Dist.CLIENT)
 		@Override
 		public boolean doesXZShowFog(int x, int z) {
-			return false;
+			return true;
 		}
 
 		@Override
@@ -738,7 +738,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 
 		@Override
 		public boolean doesWaterVaporize() {
-			return true;
+			return false;
 		}
 
 		@Override /**
