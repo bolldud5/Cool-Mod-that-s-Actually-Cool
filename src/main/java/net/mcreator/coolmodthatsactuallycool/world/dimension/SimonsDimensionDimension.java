@@ -141,7 +141,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 	public static class CustomPortalBlock extends NetherPortalBlock {
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
-					.lightValue(0).noDrops());
+					.lightValue(15).noDrops());
 			setRegistryName("simons_dimension_portal");
 		}
 
@@ -328,12 +328,12 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 				for (i = 0; i < 22; ++i) {
 					BlockPos blockpos = pos.offset(directionIn, i);
 					if (!this.func_196900_a(this.world.getBlockState(blockpos))
-							|| !(this.world.getBlockState(blockpos.down()).getBlock() == Blocks.EMERALD_BLOCK.getDefaultState().getBlock())) {
+							|| !(this.world.getBlockState(blockpos.down()).getBlock() == Blocks.COAL_BLOCK.getDefaultState().getBlock())) {
 						break;
 					}
 				}
 				BlockPos framePos = pos.offset(directionIn, i);
-				return (this.world.getBlockState(framePos).getBlock() == Blocks.EMERALD_BLOCK.getDefaultState().getBlock()) ? i : 0;
+				return (this.world.getBlockState(framePos).getBlock() == Blocks.COAL_BLOCK.getDefaultState().getBlock()) ? i : 0;
 			}
 
 			public int getHeight() {
@@ -358,12 +358,12 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 						}
 						if (i == 0) {
 							BlockPos framePos = blockpos.offset(this.leftDir);
-							if (!(this.world.getBlockState(framePos).getBlock() == Blocks.EMERALD_BLOCK.getDefaultState().getBlock())) {
+							if (!(this.world.getBlockState(framePos).getBlock() == Blocks.COAL_BLOCK.getDefaultState().getBlock())) {
 								break label56;
 							}
 						} else if (i == this.width - 1) {
 							BlockPos framePos = blockpos.offset(this.rightDir);
-							if (!(this.world.getBlockState(framePos).getBlock() == Blocks.EMERALD_BLOCK.getDefaultState().getBlock())) {
+							if (!(this.world.getBlockState(framePos).getBlock() == Blocks.COAL_BLOCK.getDefaultState().getBlock())) {
 								break label56;
 							}
 						}
@@ -371,7 +371,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 				}
 				for (int j = 0; j < this.width; ++j) {
 					BlockPos framePos = this.bottomLeft.offset(this.rightDir, j).up(this.height);
-					if (!(this.world.getBlockState(framePos).getBlock() == Blocks.EMERALD_BLOCK.getDefaultState().getBlock())) {
+					if (!(this.world.getBlockState(framePos).getBlock() == Blocks.COAL_BLOCK.getDefaultState().getBlock())) {
 						this.height = 0;
 						break;
 					}
@@ -596,7 +596,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 							boolean flag = i9 < 0;
 							blockpos$mutable.setPos(l9, j10, l10);
 							this.world.setBlockState(blockpos$mutable,
-									flag ? Blocks.EMERALD_BLOCK.getDefaultState().getBlock().getDefaultState() : Blocks.AIR.getDefaultState());
+									flag ? Blocks.COAL_BLOCK.getDefaultState().getBlock().getDefaultState() : Blocks.AIR.getDefaultState());
 						}
 					}
 				}
@@ -605,7 +605,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 				for (int j8 = -1; j8 < 4; ++j8) {
 					if (k7 == -1 || k7 == 2 || j8 == -1 || j8 == 3) {
 						blockpos$mutable.setPos(i6 + k7 * l6, k2 + j8, k6 + k7 * i3);
-						this.world.setBlockState(blockpos$mutable, Blocks.EMERALD_BLOCK.getDefaultState().getBlock().getDefaultState(), 3);
+						this.world.setBlockState(blockpos$mutable, Blocks.COAL_BLOCK.getDefaultState().getBlock().getDefaultState(), 3);
 					}
 				}
 			}

@@ -3,12 +3,12 @@
   "_type": "dimension",
   "definition": {
     "portalFrame": {
-      "value": "Blocks.EMERALD_BLOCK"
+      "value": "Blocks.COAL_BLOCK"
     },
     "portalParticles": {
       "value": "PORTAL"
     },
-    "portalLuminance": 0.0,
+    "portalLuminance": 1.0,
     "portalSound": {
       "value": "entity.enderdragon.ambient"
     },
