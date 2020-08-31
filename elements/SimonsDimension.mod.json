@@ -21,27 +21,33 @@
     "enablePortal": true,
     "biomesInDimension": [
       {
+        "value": "CUSTOM:AncientRuinsBiome"
+      },
+      {
         "value": "void"
       }
     ],
-    "worldGenType": "Normal world gen",
+    "worldGenType": "Nether like gen",
     "mainFillerBlock": {
-      "value": "CUSTOM:AngeredObsidian"
+      "value": "CUSTOM:Diat"
     },
     "fluidBlock": {
       "value": "CUSTOM:Glowl"
     },
     "airColor": {
-      "value": -16777216,
+      "value": -10027009,
       "falpha": 0.0
     },
     "canRespawnHere": false,
-    "hasFog": true,
+    "hasFog": false,
     "hasWeather": false,
-    "isDark": true,
-    "doesWaterVaporize": false,
+    "isDark": false,
+    "doesWaterVaporize": true,
     "sleepResult": "BED_EXPLODES",
     "hasSkyLight": false,
-    "imitateOverworldBehaviour": false
+    "imitateOverworldBehaviour": false,
+    "onPlayerEntersDimension": {
+      "name": "SimonsDimensionPlayerEntersDimension"
+    }
   }
 }

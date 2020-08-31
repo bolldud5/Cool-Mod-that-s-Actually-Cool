@@ -366,6 +366,35 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "diat"
+    },
+    {
+      "name": "SimonsDimensionPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simons_dimension_player_enters_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -399,6 +428,11 @@
       "name": "mob.hamster.death",
       "file": "squeak3",
       "category": "neutral"
+    },
+    {
+      "name": "block.s-portal.enter",
+      "file": "simonportalsound",
+      "category": "ambient"
     }
   ],
   "language_map": {

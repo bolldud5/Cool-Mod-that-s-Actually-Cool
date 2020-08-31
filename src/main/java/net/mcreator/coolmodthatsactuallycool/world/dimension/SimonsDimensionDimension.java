@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.RegisterDimensionsEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.ITeleporter;
 import net.minecraftforge.common.ModDimension;
@@ -68,7 +69,10 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.coolmodthatsactuallycool.procedures.SimonsDimensionPlayerEntersDimensionProcedure;
 import net.mcreator.coolmodthatsactuallycool.item.SimonsDimensionItem;
+import net.mcreator.coolmodthatsactuallycool.block.GlowlBlock;
+import net.mcreator.coolmodthatsactuallycool.block.DiatBlock;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 
 import javax.annotation.Nullable;
@@ -80,8 +84,10 @@ import java.util.function.BiFunction;
 import java.util.Set;
 import java.util.Random;
 import java.util.Optional;
+import java.util.Map;
 import java.util.List;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Comparator;
 import java.util.Arrays;
 
@@ -120,7 +126,8 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		dimensionBiomes = new Biome[]{ForgeRegistries.BIOMES.getValue(new ResourceLocation("the_void")),};
+		dimensionBiomes = new Biome[]{ForgeRegistries.BIOMES.getValue(new ResourceLocation("cool_mod_thats_actually_cool:ancient_ruins_biome")),
+				ForgeRegistries.BIOMES.getValue(new ResourceLocation("the_void")),};
 	}
 
 	@Override
@@ -747,16 +754,33 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 			return (float) (d0 * 2.0D + d1) / 3.0F;
 		}
 	}
-
+	@SubscribeEvent
+	public void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
+		Entity entity = event.getPlayer();
+		World world = entity.world;
+		double x = entity.getPosX();
+		double y = entity.getPosY();
+		double z = entity.getPosZ();
+		if (event.getTo() == type) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				SimonsDimensionPlayerEntersDimensionProcedure.executeProcedure($_dependencies);
+			}
+		}
+	}
 	public static class ChunkProviderModded extends NetherChunkGenerator {
 		public ChunkProviderModded(World world, BiomeProvider provider) {
 			super(world, provider, new NetherGenSettings() {
 				public BlockState getDefaultBlock() {
-					return Blocks.BEDROCK.getDefaultState();
+					return DiatBlock.block.getDefaultState();
 				}
 
 				public BlockState getDefaultFluid() {
-					return Blocks.BEDROCK.getDefaultState();
+					return GlowlBlock.block.getDefaultState();
 				}
 			});
 			this.randomSeed.skip(9716);
