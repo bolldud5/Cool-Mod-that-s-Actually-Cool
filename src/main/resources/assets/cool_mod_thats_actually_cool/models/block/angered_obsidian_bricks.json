@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cool_mod_thats_actually_cool:blocks/animated_angered_bricks",
+    "particle": "cool_mod_thats_actually_cool:blocks/animated_angered_bricks"
+  }
+}
