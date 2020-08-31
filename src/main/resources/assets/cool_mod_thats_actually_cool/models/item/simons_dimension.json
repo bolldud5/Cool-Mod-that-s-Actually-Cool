@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cool_mod_thats_actually_cool:items/hamster_key"
+  }
+}

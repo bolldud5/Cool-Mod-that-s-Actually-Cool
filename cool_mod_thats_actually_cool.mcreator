@@ -295,6 +295,50 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "hamster_launching"
+    },
+    {
+      "name": "SimonsDimension",
+      "type": "dimension",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simons_dimension"
+    },
+    {
+      "name": "AngeredObsidian",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angered_obsidian"
+    },
+    {
+      "name": "GlowlMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glowl_mobplayer_collides_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Glowl",
+      "type": "fluid",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glowl"
     }
   ],
   "variable_elements": [],
@@ -333,8 +377,10 @@
   "language_map": {
     "en_us": {
       "item.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert Spawn Egg",
+      "item.cool_mod_thats_actually_cool.simons_dimension": "Ancient Key",
       "entity.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant",
       "entity.cool_mod_thats_actually_cool.hamster": "Hamster",
+      "item.cool_mod_thats_actually_cool.glowl_bucket": "Glowl Bucket",
       "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
       "item.cool_mod_thats_actually_cool.cactus_spine_weapon": "Cactus Spine Weapon",
       "entity.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert",
@@ -342,9 +388,11 @@
       "item.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant Spawn Egg",
       "item.cool_mod_thats_actually_cool.hamster_launching": "Hamster Launcher",
       "item.cool_mod_thats_actually_cool.blote_meat": "Blote Meat",
+      "fluid.glowl": "Glowl",
       "item.minecraft.lingering_potion.effect.bloated_effect": "Lingering Bloated",
       "item.cool_mod_thats_actually_cool.power_source": "Power Source",
       "item.cool_mod_thats_actually_cool.hamster": "Hamster Spawn Egg",
+      "block.cool_mod_thats_actually_cool.angered_obsidian": "Angered Obsidian",
       "item.minecraft.potion.effect.bloated_effect": "Bloated",
       "item.minecraft.tipped_arrow.effect.bloated_effect": "Arrow of Bloated",
       "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley",
