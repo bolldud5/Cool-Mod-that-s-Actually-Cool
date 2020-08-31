@@ -2,18 +2,14 @@ modLoader="javafml"
 loaderVersion="[31,)"
 
 [[mods]]
-modId="mod"
-version="4.1.3"
+modId="cool_mod_thats_actually_cool"
+version="1.0.0"
 displayName="Cool Mod that's Actually Cool"
-credits="Used some modified Minecraft textures, made with MCreator"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-logoFile="logo.png"
-authors="Happymonkey, CactusHamster, Dangerkitty7, ModmakerXtreme"
-description='''
-A collaboration mod to practice modding skills
-'''
+authors="Happymonkey, MCreator"
 
-[[dependencies.mod]]
+[[dependencies.cool_mod_thats_actually_cool]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"

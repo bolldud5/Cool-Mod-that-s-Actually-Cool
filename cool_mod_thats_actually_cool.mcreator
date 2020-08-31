@@ -395,6 +395,99 @@
           }
         ]
       }
+    },
+    {
+      "name": "SoulStone",
+      "type": "block",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_stone"
+    },
+    {
+      "name": "SoulStoneXPstolen",
+      "type": "tag",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_stone_x_pstolen"
+    },
+    {
+      "name": "SoulStoneBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_stone_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoulStoneEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_stone_entity_walks_on_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoulDesert",
+      "type": "biome",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_desert"
     }
   ],
   "variable_elements": [],
@@ -443,6 +536,7 @@
       "item.cool_mod_thats_actually_cool.glowl_bucket": "Glowl Bucket",
       "item.cool_mod_thats_actually_cool.hamster_pellet": "Hamster Pellet",
       "item.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant Spawn Egg",
+      "block.cool_mod_thats_actually_cool.soul_stone": "Soul Stone",
       "block.cool_mod_thats_actually_cool.angered_obsidian_bricks": "Angered Obsidian Bricks",
       "item.cool_mod_thats_actually_cool.hamster_launching": "Hamster Launcher",
       "item.cool_mod_thats_actually_cool.blote_meat": "Blote Meat",

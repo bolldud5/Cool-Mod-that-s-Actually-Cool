@@ -1,0 +1,16 @@
+{
+  "_fv": 10,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:SoulStone"
+      }
+    ],
+    "functions": [],
+    "name": "soul_stone_xp_stolen",
+    "namespace": "minecraft"
+  }
+}
