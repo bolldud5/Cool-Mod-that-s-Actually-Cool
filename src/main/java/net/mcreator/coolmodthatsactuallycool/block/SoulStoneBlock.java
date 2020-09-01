@@ -120,10 +120,6 @@ public class SoulStoneBlock extends CoolModThatsActuallyCoolModElements.ModEleme
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				SoulStoneEntityWalksOnTheBlockProcedure.executeProcedure($_dependencies);
 			}
 		}

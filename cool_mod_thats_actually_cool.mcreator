@@ -406,15 +406,6 @@
       "registry_name": "soul_stone"
     },
     {
-      "name": "SoulStoneXPstolen",
-      "type": "tag",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "soul_stone_x_pstolen"
-    },
-    {
       "name": "SoulStoneBlockDestroyedByPlayer",
       "type": "procedure",
       "sortid": 21,
@@ -460,22 +451,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
