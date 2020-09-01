@@ -63,7 +63,7 @@
     ]
   },
   "mob.soulzombie.ambient": {
-    "category": "hostile",
+    "category": "master",
     "sounds": [
       {
         "name": "cool_mod_thats_actually_cool:eq_pitch_minecraft-zombie2",
