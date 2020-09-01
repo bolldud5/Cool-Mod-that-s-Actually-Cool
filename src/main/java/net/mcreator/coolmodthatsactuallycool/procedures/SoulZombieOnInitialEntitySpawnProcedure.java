@@ -26,7 +26,7 @@ public class SoulZombieOnInitialEntitySpawnProcedure extends CoolModThatsActuall
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((Math.random() < 0.1)) {
 			if (entity instanceof LivingEntity) {
-				ItemStack _setstack = new ItemStack(Items.TIPPED_ARROW, (int) (1));
+				ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE, (int) (1));
 				_setstack.setCount((int) 1);
 				((LivingEntity) entity).setHeldItem(Hand.OFF_HAND, _setstack);
 				if (entity instanceof ServerPlayerEntity)

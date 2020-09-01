@@ -28,7 +28,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.projectile.PotionEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RestrictSunGoal;
@@ -111,8 +110,8 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 			super(type, world);
 			experienceValue = 8;
 			setNoAI(false);
-			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(Items.CROSSBOW, (int) (1)));
-			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(Items.FIREWORK_ROCKET, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.MAINHAND, new ItemStack(Items.STONE_AXE, (int) (1)));
+			this.setItemStackToSlot(EquipmentSlotType.OFFHAND, new ItemStack(Items.STONE_AXE, (int) (1)));
 		}
 
 		@Override
@@ -125,7 +124,7 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 			super.registerGoals();
 			this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
 			this.goalSelector.addGoal(2, new RestrictSunGoal(this));
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, SandSnailEntity.CustomEntity.class, false, false));
 			this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false));
 			this.goalSelector.addGoal(5, new BreakDoorGoal(this, e -> true));
 			this.goalSelector.addGoal(6, new RandomWalkingGoal(this, 1));
