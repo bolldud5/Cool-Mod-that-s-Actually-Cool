@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "cool_mod_thats_actually_cool:blocks/diamondcrystalsonobsidian",
+    "up": "cool_mod_thats_actually_cool:blocks/diamondcrystalsonobsidian",
+    "north": "cool_mod_thats_actually_cool:blocks/diamondcrystalsonobsidian",
+    "east": "cool_mod_thats_actually_cool:blocks/diamondcrystalsonobsidian",
+    "south": "cool_mod_thats_actually_cool:blocks/diamondcrystalsonobsidian",
+    "west": "cool_mod_thats_actually_cool:blocks/diamondcrystalsonobsidian",
+    "particle": "cool_mod_thats_actually_cool:blocks/diamondcrystalsonobsidian"
+  }
+}
