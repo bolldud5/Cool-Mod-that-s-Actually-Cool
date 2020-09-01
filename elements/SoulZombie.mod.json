@@ -5,7 +5,7 @@
     "mobName": "Soul Zombie",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "zombiemodeltemplate.png_1.png",
+    "mobModelTexture": "newsoulzombie.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
