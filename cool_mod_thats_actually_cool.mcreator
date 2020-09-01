@@ -489,6 +489,48 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "soul_zombie"
+    },
+    {
+      "name": "SoulZombieEntityIsHurt",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondEncrustedObsidian",
+      "type": "block",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_encrusted_obsidian"
     }
   ],
   "variable_elements": [],
@@ -531,7 +573,7 @@
     {
       "name": "mob.soulzombie.ambient",
       "file": "eq_pitch_minecraft-zombie2",
-      "category": "master"
+      "category": "hostile"
     }
   ],
   "language_map": {
@@ -540,6 +582,7 @@
       "entity.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant",
       "entity.cool_mod_thats_actually_cool.hamster": "Hamster",
       "item.cool_mod_thats_actually_cool.glowl_bucket": "Glowl Bucket",
+      "block.cool_mod_thats_actually_cool.diamond_encrusted_obsidian": "Diamond Encrusted Obsidian",
       "item.cool_mod_thats_actually_cool.hamster_pellet": "Hamster Pellet",
       "item.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant Spawn Egg",
       "block.cool_mod_thats_actually_cool.soul_stone": "Soul Stone",

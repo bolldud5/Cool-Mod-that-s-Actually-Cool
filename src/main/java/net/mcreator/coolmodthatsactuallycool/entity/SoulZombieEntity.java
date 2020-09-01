@@ -50,6 +50,7 @@ import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 
 import net.mcreator.coolmodthatsactuallycool.procedures.SoulZombieOnInitialEntitySpawnProcedure;
+import net.mcreator.coolmodthatsactuallycool.procedures.SoulZombieEntityIsHurtProcedure;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 
 import java.util.Map;
@@ -160,6 +161,20 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			Entity sourceentity = source.getTrueSource();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				SoulZombieEntityIsHurtProcedure.executeProcedure($_dependencies);
+			}
 			if (source.getImmediateSource() instanceof PotionEntity)
 				return false;
 			return super.attackEntityFrom(source, amount);
