@@ -69,7 +69,7 @@ public class SoulDesertBiome extends CoolModThatsActuallyCoolModElements.ModElem
 					.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(SoulStoneBlock.block.getDefaultState()),
 							new SimpleBlockStateProvider(SoulStoneBlock.block.getDefaultState()))).baseHeight(150)
 									.setSapling((net.minecraftforge.common.IPlantable) Blocks.JUNGLE_SAPLING).build())
-					.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(5, 0.1F, 1))));
+					.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 		}
 
 		@OnlyIn(Dist.CLIENT)

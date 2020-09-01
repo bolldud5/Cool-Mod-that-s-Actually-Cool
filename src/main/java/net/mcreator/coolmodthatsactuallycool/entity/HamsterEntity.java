@@ -39,6 +39,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.entity.AgeableEntity;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -105,7 +106,7 @@ public class HamsterEntity extends CoolModThatsActuallyCoolModElements.ModElemen
 			this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 			this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 0.8));
 			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, AgeableEntity.class, false, false));
 			this.goalSelector.addGoal(7, new BreakDoorGoal(this, e -> true));
 		}
 

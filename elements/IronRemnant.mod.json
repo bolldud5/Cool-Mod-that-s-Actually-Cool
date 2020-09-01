@@ -116,7 +116,10 @@
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
       {
-        "value": "desert"
+        "value": "CUSTOM:AncientRuinsBiome"
+      },
+      {
+        "value": "CUSTOM:SoulDesert"
       }
     ],
     "spawnInDungeons": false

@@ -41,7 +41,6 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.block.material.Material;
 
 import net.mcreator.coolmodthatsactuallycool.item.CactusSpineWeaponItem;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
@@ -59,7 +58,7 @@ public class SandSnailEntity extends CoolModThatsActuallyCoolModElements.ModElem
 
 	@Override
 	public void initElements() {
-		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE).setShouldReceiveVelocityUpdates(true)
+		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
 				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.75f, 1.875f))
 						.build("sand_snail").setRegistryName("sand_snail");
 		elements.entities.add(() -> entity);
@@ -71,15 +70,14 @@ public class SandSnailEntity extends CoolModThatsActuallyCoolModElements.ModElem
 	public void init(FMLCommonSetupEvent event) {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
 			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("desert")))
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("cool_mod_thats_actually_cool:ancient_ruins_biome")))
 				biomeCriteria = true;
 			if (!biomeCriteria)
 				continue;
-			biome.getSpawns(EntityClassification.CREATURE).add(new Biome.SpawnListEntry(entity, 20, 4, 4));
+			biome.getSpawns(EntityClassification.MONSTER).add(new Biome.SpawnListEntry(entity, 20, 4, 4));
 		}
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos,
-						random) -> (world.getBlockState(pos.down()).getMaterial() == Material.ORGANIC && world.getLightSubtracted(pos, 0) > 8));
+				MonsterEntity::canMonsterSpawn);
 	}
 
 	@SubscribeEvent

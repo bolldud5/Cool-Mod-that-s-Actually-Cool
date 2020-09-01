@@ -61,5 +61,14 @@
         "stream": false
       }
     ]
+  },
+  "mob.soulzombie.ambient": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:eq_pitch_minecraft-zombie2",
+        "stream": false
+      }
+    ]
   }
 }

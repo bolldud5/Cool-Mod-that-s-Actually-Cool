@@ -463,6 +463,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "soul_desert"
+    },
+    {
+      "name": "SoulZombieOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoulZombie",
+      "type": "mob",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie"
     }
   ],
   "variable_elements": [],
@@ -501,6 +527,11 @@
       "name": "block.s-portal.enter",
       "file": "simonportalsound",
       "category": "ambient"
+    },
+    {
+      "name": "mob.soulzombie.ambient",
+      "file": "eq_pitch_minecraft-zombie2",
+      "category": "master"
     }
   ],
   "language_map": {
@@ -524,8 +555,10 @@
       "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
       "item.cool_mod_thats_actually_cool.cactus_spine_weapon": "Cactus Spine Weapon",
       "entity.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert",
+      "item.cool_mod_thats_actually_cool.soul_zombie": "Soul Zombie Spawn Egg",
       "item.cool_mod_thats_actually_cool.hamster": "Hamster Spawn Egg",
       "item.cool_mod_thats_actually_cool.power_source": "Power Source",
+      "entity.cool_mod_thats_actually_cool.soul_zombie": "Soul Zombie",
       "item.minecraft.tipped_arrow.effect.bloated_effect": "Arrow of Bloated",
       "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley",
       "effect.bloated_effect": "Bloating",

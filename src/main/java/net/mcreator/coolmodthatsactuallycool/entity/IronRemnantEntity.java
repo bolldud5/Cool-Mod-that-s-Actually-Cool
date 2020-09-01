@@ -79,7 +79,9 @@ public class IronRemnantEntity extends CoolModThatsActuallyCoolModElements.ModEl
 	public void init(FMLCommonSetupEvent event) {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
 			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("desert")))
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("cool_mod_thats_actually_cool:ancient_ruins_biome")))
+				biomeCriteria = true;
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("cool_mod_thats_actually_cool:soul_desert")))
 				biomeCriteria = true;
 			if (!biomeCriteria)
 				continue;
