@@ -70,7 +70,7 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 						.setRegistryName("soul_zombie");
 		elements.entities.add(() -> entity);
 		elements.items
-				.add(() -> new SpawnEggItem(entity, -10662072, -9023429, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("soul_zombie"));
+				.add(() -> new SpawnEggItem(entity, -16777216, -9023429, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("soul_zombie"));
 	}
 
 	@Override
@@ -94,7 +94,7 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 			BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("cool_mod_thats_actually_cool:textures/newsoulzombie.png");
+					return new ResourceLocation("cool_mod_thats_actually_cool:textures/texture_1.png");
 				}
 			};
 			customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

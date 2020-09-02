@@ -5,7 +5,7 @@
     "mobName": "Soul Zombie",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "newsoulzombie.png",
+    "mobModelTexture": "texture_1.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
@@ -13,7 +13,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -10662072,
+      "value": -16777216,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
