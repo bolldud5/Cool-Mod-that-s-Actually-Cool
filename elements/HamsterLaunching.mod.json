@@ -25,8 +25,8 @@
     "onRangedItemUsed": {
       "name": "HamsterLauncherRangedItemUsed"
     },
-    "bulletPower": 5.0,
-    "bulletDamage": 5.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 6.0,
     "bulletKnockback": 1,
     "bulletParticles": true,
     "bulletIgnitesFire": false,
