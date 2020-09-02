@@ -50,7 +50,6 @@ import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
 import net.minecraft.client.renderer.entity.BipedRenderer;
 
 import net.mcreator.coolmodthatsactuallycool.procedures.SoulZombieOnInitialEntitySpawnProcedure;
-import net.mcreator.coolmodthatsactuallycool.procedures.SoulZombieEntityIsHurtProcedure;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 
 import java.util.Map;
@@ -71,7 +70,7 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 						.setRegistryName("soul_zombie");
 		elements.entities.add(() -> entity);
 		elements.items
-				.add(() -> new SpawnEggItem(entity, -16777216, -9023429, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("soul_zombie"));
+				.add(() -> new SpawnEggItem(entity, -10662072, -9023429, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("soul_zombie"));
 	}
 
 	@Override
@@ -95,7 +94,7 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 			BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("cool_mod_thats_actually_cool:textures/texture_1.png");
+					return new ResourceLocation("cool_mod_thats_actually_cool:textures/newsoulzombie.png");
 				}
 			};
 			customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));
@@ -161,20 +160,6 @@ public class SoulZombieEntity extends CoolModThatsActuallyCoolModElements.ModEle
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-			Entity sourceentity = source.getTrueSource();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				SoulZombieEntityIsHurtProcedure.executeProcedure($_dependencies);
-			}
 			if (source.getImmediateSource() instanceof PotionEntity)
 				return false;
 			return super.attackEntityFrom(source, amount);

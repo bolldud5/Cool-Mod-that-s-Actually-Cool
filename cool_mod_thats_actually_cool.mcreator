@@ -531,6 +531,61 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "diamond_encrusted_obsidian"
+    },
+    {
+      "name": "DesertWalkerOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_walker_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DesertWalkerOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_walker_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DesertWalker",
+      "type": "mob",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_walker"
     }
   ],
   "variable_elements": [],
@@ -595,6 +650,7 @@
       "item.minecraft.potion.effect.bloated_effect": "Bloated",
       "block.cool_mod_thats_actually_cool.diat": "Diat",
       "item.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert Spawn Egg",
+      "entity.cool_mod_thats_actually_cool.desert_walker": "Desert Walker",
       "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
       "item.cool_mod_thats_actually_cool.cactus_spine_weapon": "Cactus Spine Weapon",
       "entity.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert",
@@ -605,6 +661,7 @@
       "item.minecraft.tipped_arrow.effect.bloated_effect": "Arrow of Bloated",
       "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley",
       "effect.bloated_effect": "Bloating",
+      "item.cool_mod_thats_actually_cool.desert_walker": "Desert Walker Spawn Egg",
       "item.minecraft.splash_potion.effect.bloated_effect": "Splash Bloated"
     }
   },

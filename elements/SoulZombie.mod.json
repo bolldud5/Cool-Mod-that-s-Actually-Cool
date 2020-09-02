@@ -5,7 +5,7 @@
     "mobName": "Soul Zombie",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "texture_1.png",
+    "mobModelTexture": "newsoulzombie.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
@@ -13,7 +13,7 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16777216,
+      "value": -10662072,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -91,9 +91,6 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "whenMobIsHurt": {
-      "name": "SoulZombieEntityIsHurt"
-    },
     "onInitialSpawn": {
       "name": "SoulZombieOnInitialEntitySpawn"
     },

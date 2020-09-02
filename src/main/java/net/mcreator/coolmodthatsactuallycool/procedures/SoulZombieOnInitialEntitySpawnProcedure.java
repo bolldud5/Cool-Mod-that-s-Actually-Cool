@@ -77,7 +77,7 @@ public class SoulZombieOnInitialEntitySpawnProcedure extends CoolModThatsActuall
 					((ServerPlayerEntity) entity).inventory.markDirty();
 			}
 		}
-		if ((Math.random() < 0.05)) {
+		if ((Math.random() < 0.1)) {
 			if (entity instanceof LivingEntity) {
 				ItemStack _setstack = new ItemStack(Items.GOLDEN_SWORD, (int) (1));
 				_setstack.setCount((int) 1);
@@ -92,8 +92,6 @@ public class SoulZombieOnInitialEntitySpawnProcedure extends CoolModThatsActuall
 				if (entity instanceof ServerPlayerEntity)
 					((ServerPlayerEntity) entity).inventory.markDirty();
 			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).setHealth((float) (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) / 2));
 		}
 	}
 }
