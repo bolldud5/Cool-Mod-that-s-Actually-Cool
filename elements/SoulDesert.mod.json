@@ -1,0 +1,63 @@
+{
+  "_fv": 10,
+  "_type": "biome",
+  "definition": {
+    "groundBlock": {
+      "value": "Blocks.SOUL_SAND"
+    },
+    "undergroundBlock": {
+      "value": "CUSTOM:SoulStone"
+    },
+    "generateLakes": false,
+    "treeType": 1,
+    "vanillaTreeType": "Default",
+    "minHeight": 150,
+    "spawnVines": false,
+    "treeVines": {
+      "value": "Blocks.SOUL_SAND"
+    },
+    "treeStem": {
+      "value": "CUSTOM:SoulStone"
+    },
+    "treeBranch": {
+      "value": "CUSTOM:SoulStone"
+    },
+    "treeFruits": {
+      "value": "CUSTOM:Diat"
+    },
+    "airColor": {
+      "value": -13293278,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -13293278,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -13293278,
+      "falpha": 0.0
+    },
+    "treesPerChunk": 1,
+    "grassPerChunk": 0,
+    "flowersPerChunk": 0,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPathcesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "rainingPossibility": 0.0,
+    "temperature": 1.6,
+    "baseHeight": 0.1,
+    "heightVariation": 0.5,
+    "spawnBiome": true,
+    "biomeWeight": 10,
+    "biomeType": "DESERT",
+    "biomeCategory": "NONE",
+    "parent": {
+      "value": "No parent"
+    },
+    "biomeDictionaryTypes": [],
+    "spawnEntries": []
+  }
+}

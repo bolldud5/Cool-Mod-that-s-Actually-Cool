@@ -1,0 +1,7 @@
+{
+  "parent": "cool_mod_thats_actually_cool:custom/hamsterlauncher2",
+  "textures": {
+    "0": "cool_mod_thats_actually_cool:blocks/launcher",
+    "particle": "cool_mod_thats_actually_cool:items/launcher"
+  }
+}

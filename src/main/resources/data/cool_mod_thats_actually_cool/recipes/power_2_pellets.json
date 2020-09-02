@@ -1,0 +1,13 @@
+{
+  "group": "cool_mod_thats_actually_cool",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cool_mod_thats_actually_cool:unknown_element"
+    }
+  ],
+  "result": {
+    "item": "cool_mod_thats_actually_cool:unknown_element",
+    "count": 1
+  }
+}

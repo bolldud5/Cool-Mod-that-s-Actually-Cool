@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "cool_mod_thats_actually_cool:block/simons_dimension_portal_ew"
+    },
+    "axis=x": {
+      "model": "cool_mod_thats_actually_cool:block/simons_dimension_portal_ns"
+    }
+  }
+}

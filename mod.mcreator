@@ -1,0 +1,524 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "PROGRAMMedley",
+      "type": "musicdisc",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "program_medley"
+    },
+    {
+      "name": "BloatedEffectOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloated_effect_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloatedEffect",
+      "type": "potion",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloated_effect"
+    },
+    {
+      "name": "BloteMeatFoodEaten",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote_meat_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloteMeatItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote_meat_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloteMeat",
+      "type": "food",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote_meat"
+    },
+    {
+      "name": "CactusSpineWeapon",
+      "type": "gun",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cactus_spine_weapon"
+    },
+    {
+      "name": "SandSnail",
+      "type": "mob",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sand_snail"
+    },
+    {
+      "name": "IronRemnant",
+      "type": "mob",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_remnant"
+    },
+    {
+      "name": "IronRemnantEntityIsHurt",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_remnant_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PowerSource",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "power_source"
+    },
+    {
+      "name": "IronRemnantEntityDies",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_remnant_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hamster",
+      "type": "mob",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster"
+    },
+    {
+      "name": "HamsterPelletItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_pellet_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HamsterPellet",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_pellet"
+    },
+    {
+      "name": "Power2Pellets",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "power_2_pellets"
+    },
+    {
+      "name": "HamsterLauncherRangedItemUsed",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_launcher_ranged_item_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HamsterLauncherBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_launcher_bullet_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HamsterLaunching",
+      "type": "gun",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_launching"
+    },
+    {
+      "name": "SimonsDimension",
+      "type": "dimension",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simons_dimension"
+    },
+    {
+      "name": "AngeredObsidian",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angered_obsidian"
+    },
+    {
+      "name": "GlowlMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glowl_mobplayer_collides_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Glowl",
+      "type": "fluid",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glowl"
+    },
+    {
+      "name": "AngeredObsidianBricks",
+      "type": "block",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angered_obsidian_bricks"
+    },
+    {
+      "name": "AncientRuinsBiome",
+      "type": "biome",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ancient_ruins_biome"
+    },
+    {
+      "name": "Diat",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diat"
+    },
+    {
+      "name": "SimonsDimensionPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simons_dimension_player_enters_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoulStone",
+      "type": "block",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_stone"
+    },
+    {
+      "name": "SoulDesert",
+      "type": "biome",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_desert"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "program1",
+      "file": "mind-in-a-program-medley",
+      "category": "record"
+    },
+    {
+      "name": "item.blotemeat.sizzle",
+      "file": "small-fireball-soundbible.com-1381880822",
+      "category": "ambient"
+    },
+    {
+      "name": "fortress_death",
+      "file": "shell_break",
+      "category": "master"
+    },
+    {
+      "name": "mob.sandsnail.ambient",
+      "file": "zapsplat_household_necklace_beaded_set_down_in_ceramic_bowl_or_surface_001_39946",
+      "category": "neutral"
+    },
+    {
+      "name": "mob.hamster.hurt",
+      "file": "squaek2",
+      "category": "hostile"
+    },
+    {
+      "name": "mob.hamster.death",
+      "file": "squeak3",
+      "category": "neutral"
+    },
+    {
+      "name": "block.s-portal.enter",
+      "file": "simonportalsound",
+      "category": "ambient"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.cool_mod_thats_actually_cool.simons_dimension": "Ancient Key",
+      "entity.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant",
+      "entity.mod.hamster": "Hamster",
+      "entity.cool_mod_thats_actually_cool.hamster": "Hamster",
+      "item.cool_mod_thats_actually_cool.glowl_bucket": "Glowl Bucket",
+      "block.mod.soul_stone": "Soul Stone",
+      "item.mod.blote_meat": "Blote Meat",
+      "block.mod.angered_obsidian_bricks": "Angered Obsidian Bricks",
+      "item.cool_mod_thats_actually_cool.hamster_pellet": "Hamster Pellet",
+      "item.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant Spawn Egg",
+      "block.cool_mod_thats_actually_cool.soul_stone": "Soul Stone",
+      "item.mod.program_medley.desc": "Mind in a PROGRAM Medley",
+      "block.cool_mod_thats_actually_cool.angered_obsidian_bricks": "Angered Obsidian Bricks",
+      "item.mod.program_medley": "PROGRAM Medley",
+      "item.cool_mod_thats_actually_cool.hamster_launching": "Hamster Launcher",
+      "item.cool_mod_thats_actually_cool.blote_meat": "Blote Meat",
+      "fluid.glowl": "Glowl",
+      "item.mod.simons_dimension": "Ancient Key",
+      "block.mod.diat": "Diat",
+      "item.minecraft.lingering_potion.effect.bloated_effect": "Lingering Bloated",
+      "block.cool_mod_thats_actually_cool.angered_obsidian": "Angered Obsidian",
+      "item.mod.power_source": "Power Source",
+      "item.minecraft.potion.effect.bloated_effect": "Bloated",
+      "entity.mod.iron_remnant": "Iron Remnant",
+      "block.cool_mod_thats_actually_cool.diat": "Diat",
+      "item.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert Spawn Egg",
+      "entity.mod.sand_snail": "Fortress of the Desert",
+      "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
+      "item.cool_mod_thats_actually_cool.cactus_spine_weapon": "Cactus Spine Weapon",
+      "entity.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert",
+      "item.mod.hamster_launching": "Hamster Launcher",
+      "item.mod.cactus_spine_weapon": "Cactus Spine Weapon",
+      "item.mod.glowl_bucket": "Glowl Bucket",
+      "item.mod.sand_snail": "Fortress of the Desert Spawn Egg",
+      "item.mod.hamster_pellet": "Hamster Pellet",
+      "item.mod.iron_remnant": "Iron Remnant Spawn Egg",
+      "item.cool_mod_thats_actually_cool.hamster": "Hamster Spawn Egg",
+      "item.cool_mod_thats_actually_cool.power_source": "Power Source",
+      "item.mod.hamster": "Hamster Spawn Egg",
+      "block.mod.angered_obsidian": "Angered Obsidian",
+      "item.minecraft.tipped_arrow.effect.bloated_effect": "Arrow of Bloated",
+      "item.cool_mod_thats_actually_cool.program_medley": "PROGRAM Medley",
+      "effect.bloated_effect": "Bloating",
+      "item.minecraft.splash_potion.effect.bloated_effect": "Splash Bloated"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "mod",
+    "modName": "Cool Mod that\u0027s Actually Cool",
+    "version": "4.1.3",
+    "description": "A collaboration mod to practice modding skills",
+    "author": "Happymonkey, CactusHamster, Dangerkitty7, ModmakerXtreme",
+    "websiteURL": "CactusHamster is awesome.",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "cake",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.15.2",
+    "credits": "Used some modified Minecraft textures, made with MCreator",
+    "modElementsPackage": "net.mcreator.coolmodthatsactuallycool",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000432115
+}

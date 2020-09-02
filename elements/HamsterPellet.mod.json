@@ -1,0 +1,33 @@
+{
+  "_fv": 10,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "hamster_pellet",
+    "customModelName": "Normal",
+    "name": "Hamster Pellet",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "destroyAnyBlock": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "Ammuntion for a Hamster Launcher"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onCrafted": {
+      "name": "HamsterPelletItemIsCraftedsmelted"
+    }
+  }
+}
