@@ -1,0 +1,9 @@
+{
+  "group": "cool_mod_thats_actually_cool",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:dirt"
+  },
+  "result": "minecraft:diamond_block"
+}

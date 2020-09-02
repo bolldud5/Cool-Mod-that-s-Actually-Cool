@@ -1,10 +1,32 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Dirt2Diamonds",
+      "type": "recipe",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_2_diamonds"
+    },
+    {
+      "name": "Blote",
+      "type": "mob",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.cool_mod_thats_actually_cool.blote": "Blote Spawn Egg",
+      "entity.cool_mod_thats_actually_cool.blote": "Blote"
+    }
   },
   "workspaceSettings": {
     "modid": "cool_mod_thats_actually_cool",
