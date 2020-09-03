@@ -1,29 +1,25 @@
 
 package net.mcreator.coolmodthatsactuallycool.block;
 
-import org.omg.CORBA.ObjectHolder;
-
 import net.minecraft.block.material.Material;
-
-import net.mcreator.coolmodthatsactuallycool.world.dimension.SimonsDimensionDimension;
-import net.mcreator.coolmodthatsactuallycool.procedures.GlowlMobplayerCollidesBlockProcedure;
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
 
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class GlowlBlock extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:glowl")
 	public static final FlowingFluidBlock block = null;
+
 	@ObjectHolder("cool_mod_thats_actually_cool:glowl_bucket")
 	public static final Item bucket = null;
+
 	public static FlowingFluid flowing = null;
 	public static FlowingFluid still = null;
+
 	private ForgeFlowingFluid.Properties fluidproperties = null;
+
 	public GlowlBlock(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 15);
+
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -47,9 +43,12 @@ public class GlowlBlock extends CoolModThatsActuallyCoolModElements.ModElement {
 						.builder(new ResourceLocation("cool_mod_thats_actually_cool:blocks/angered_obsidian1"),
 								new ResourceLocation("cool_mod_thats_actually_cool:blocks/glowl_flowing_animation"))
 						.luminosity(15).density(10000).viscosity(10000)).bucket(() -> bucket).block(() -> block);
+
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("glowl");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("glowl_flowing");
+
 		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
+
 			@Override
 			public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
 				super.onEntityCollision(state, world, pos, entity);
@@ -58,11 +57,14 @@ public class GlowlBlock extends CoolModThatsActuallyCoolModElements.ModElement {
 				int z = pos.getZ();
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+
 					$_dependencies.put("entity", entity);
+
 					GlowlMobplayerCollidesBlockProcedure.executeProcedure($_dependencies);
 				}
 			}
 		}.setRegistryName("glowl"));
+
 		elements.items.add(() -> new BucketItem(still, new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(ItemGroup.MISC))
 				.setRegistryName("glowl_bucket"));
 	}
@@ -75,14 +77,18 @@ public class GlowlBlock extends CoolModThatsActuallyCoolModElements.ModElement {
 				public boolean place(IWorld world, ChunkGenerator generator, Random rand, BlockPos pos, BlockStateFeatureConfig config) {
 					DimensionType dimensionType = world.getDimension().getType();
 					boolean dimensionCriteria = false;
+
 					if (dimensionType == SimonsDimensionDimension.type)
 						dimensionCriteria = true;
+
 					if (!dimensionCriteria)
 						return false;
+
 					return super.place(world, generator, rand, pos, config);
 				}
 			}.withConfiguration(new BlockStateFeatureConfig(block.getDefaultState()))
 					.withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(5))));
 		}
 	}
+
 }

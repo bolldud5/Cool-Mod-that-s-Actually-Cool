@@ -1,22 +1,15 @@
 
 package net.mcreator.coolmodthatsactuallycool.item;
 
-import org.omg.CORBA.ObjectHolder;
-
-import net.mcreator.coolmodthatsactuallycool.procedures.HamsterLauncherRangedItemUsedProcedure;
-import net.mcreator.coolmodthatsactuallycool.procedures.HamsterLauncherBulletHitsBlockProcedure;
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Random;
-import java.util.Map;
-import java.util.HashMap;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:hamster_launching")
 	public static final Item block = null;
+
 	@ObjectHolder("cool_mod_thats_actually_cool:entitybullethamster_launching")
 	public static final EntityType arrow = null;
+
 	public HamsterLaunchingItem(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 12);
 	}
@@ -34,9 +27,12 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 	public void init(FMLCommonSetupEvent event) {
 		RenderingRegistry.registerEntityRenderingHandler(arrow, renderManager -> new CustomRender(renderManager));
 	}
+
 	public static class ItemRanged extends Item {
+
 		public ItemRanged() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(10000));
+
 			setRegistryName("hamster_launching");
 		}
 
@@ -66,6 +62,7 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 				if (true) {
 					ItemStack stack = ShootableItem.getHeldAmmo(entity,
 							e -> e.getItem() == new ItemStack(HamsterPelletItem.block, (int) (1)).getItem());
+
 					if (stack == ItemStack.EMPTY) {
 						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
 							ItemStack teststack = entity.inventory.mainInventory.get(i);
@@ -75,9 +72,13 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 							}
 						}
 					}
+
 					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 5f, 5, 1);
+
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 1f, 6, 1);
+
 						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
+
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
 						} else {
@@ -94,19 +95,25 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 									entity.inventory.deleteStack(stack);
 							}
 						}
+
 						{
 							Map<String, Object> $_dependencies = new HashMap<>();
+
 							$_dependencies.put("entity", entity);
+
 							HamsterLauncherRangedItemUsedProcedure.executeProcedure($_dependencies);
 						}
+
 					}
 				}
 			}
 		}
+
 	}
 
 	@OnlyIn(value = Dist.CLIENT, _interface = IRendersAsItem.class)
 	public static class ArrowCustomEntity extends AbstractArrowEntity implements IRendersAsItem {
+
 		public ArrowCustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
 			super(arrow, world);
 		}
@@ -156,19 +163,23 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 			if (this.inGround) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
 					$_dependencies.put("world", world);
+
 					HamsterLauncherBulletHitsBlockProcedure.executeProcedure($_dependencies);
 				}
 				this.remove();
 			}
 		}
+
 	}
 
 	public static class CustomRender extends EntityRenderer<ArrowCustomEntity> {
 		private static final ResourceLocation texture = new ResourceLocation("cool_mod_thats_actually_cool:textures/myhamster.png");
+
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);
 		}
@@ -183,6 +194,7 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 			EntityModel model = new Model_Hamster_1();
 			model.render(matrixStackIn, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 0.0625f);
 			matrixStackIn.pop();
+
 			super.render(entityIn, entityYaw, partialTicks, matrixStackIn, bufferIn, packedLightIn);
 		}
 
@@ -195,21 +207,26 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 	// Made with Blockbench 3.6.6
 	// Exported for Minecraft version 1.15
 	// Paste this class into your mod and generate all required imports
+
 	public static class Model_Hamster_1 extends EntityModel<Entity> {
 		private final ModelRenderer Tail;
 		private final ModelRenderer Head;
 		private final ModelRenderer Body;
+
 		public Model_Hamster_1() {
 			textureWidth = 64;
 			textureHeight = 64;
+
 			Tail = new ModelRenderer(this);
 			Tail.setRotationPoint(0.0F, 24.0F, 5.0F);
 			Tail.setTextureOffset(4, 0).addBox(-1.0F, -1.0F, 0.0F, 2.0F, 1.0F, 1.0F, 0.0F, false);
+
 			Head = new ModelRenderer(this);
 			Head.setRotationPoint(0.0F, 19.0F, -6.0F);
 			Head.setTextureOffset(0, 3).addBox(-3.0F, -2.0F, -1.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
 			Head.setTextureOffset(0, 0).addBox(2.0F, -2.0F, -1.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
 			Head.setTextureOffset(0, 16).addBox(-3.0F, -1.0F, -2.0F, 6.0F, 4.0F, 3.0F, 0.0F, false);
+
 			Body = new ModelRenderer(this);
 			Body.setRotationPoint(0.0F, 21.0F, 0.0F);
 			Body.setTextureOffset(0, 0).addBox(-4.0F, -2.0F, -6.0F, 8.0F, 5.0F, 11.0F, 0.0F, false);
@@ -230,11 +247,13 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 			this.Head.rotateAngleY = f3 / (180F / (float) Math.PI);
 			this.Head.rotateAngleX = f4 / (180F / (float) Math.PI);
 			this.Tail.rotateAngleY = f4 / (180F / (float) Math.PI);
 		}
 	}
+
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);
@@ -243,12 +262,14 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 		entityarrow.setDamage(damage);
 		entityarrow.setKnockbackStrength(knockback);
 		world.addEntity(entityarrow);
+
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
 				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ghast.shoot")),
 				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+
 		return entityarrow;
 	}
 
@@ -257,18 +278,22 @@ public class HamsterLaunchingItem extends CoolModThatsActuallyCoolModElements.Mo
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 5f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1f * 2, 12.0F);
+
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(5);
+		entityarrow.setDamage(6);
 		entityarrow.setKnockbackStrength(1);
 		entityarrow.setIsCritical(true);
 		entity.world.addEntity(entityarrow);
+
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
 				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.ghast.shoot")),
 				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+
 		return entityarrow;
 	}
+
 }

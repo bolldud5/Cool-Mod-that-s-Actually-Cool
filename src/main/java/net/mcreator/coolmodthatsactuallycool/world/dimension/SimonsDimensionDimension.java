@@ -1,42 +1,24 @@
 
 package net.mcreator.coolmodthatsactuallycool.world.dimension;
 
-import org.omg.CORBA.ObjectHolder;
-
 import net.minecraft.block.material.Material;
-
-import net.mcreator.coolmodthatsactuallycool.procedures.SimonsDimensionPlayerEntersDimensionProcedure;
-import net.mcreator.coolmodthatsactuallycool.item.SimonsDimensionItem;
-import net.mcreator.coolmodthatsactuallycool.block.GlowlBlock;
-import net.mcreator.coolmodthatsactuallycool.block.DiatBlock;
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.function.LongFunction;
-import java.util.function.Function;
-import java.util.function.BiFunction;
-import java.util.Set;
-import java.util.Random;
-import java.util.Map;
-import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Arrays;
-
-import java.rmi.registry.Registry;
-
-import java.lang.reflect.Method;
-
-import java.awt.Dimension;
 
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:simons_dimension")
 	public static final ModDimension dimension = null;
+
 	@ObjectHolder("cool_mod_thats_actually_cool:simons_dimension_portal")
 	public static final CustomPortalBlock portal = null;
+
 	public static DimensionType type = null;
+
 	private static Biome[] dimensionBiomes;
+
 	public SimonsDimensionDimension(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 13);
+
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -51,6 +33,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 		if (DimensionType.byName(new ResourceLocation("cool_mod_thats_actually_cool:simons_dimension")) == null) {
 			DimensionManager.registerDimension(new ResourceLocation("cool_mod_thats_actually_cool:simons_dimension"), dimension, null, false);
 		}
+
 		type = DimensionType.byName(new ResourceLocation("cool_mod_thats_actually_cool:simons_dimension"));
 	}
 
@@ -73,7 +56,9 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(portal, RenderType.getTranslucent());
 	}
+
 	public static class CustomPortalBlock extends NetherPortalBlock {
+
 		public CustomPortalBlock() {
 			super(Block.Properties.create(Material.PORTAL).doesNotBlockMovement().tickRandomly().hardnessAndResistance(-1.0F).sound(SoundType.GLASS)
 					.lightValue(15).noDrops());
@@ -91,8 +76,11 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 		}
 
 		/* failed to load code for net.minecraft.block.NetherPortalBlock */
+
 		/* failed to load code for net.minecraft.block.NetherPortalBlock */
+
 		@Override /* failed to load code for net.minecraft.block.NetherPortalBlock */
+
 		@OnlyIn(Dist.CLIENT)
 		@Override
 		public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
@@ -113,6 +101,7 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 				}
 				world.addParticle(ParticleTypes.PORTAL, px, py, pz, vx, vy, vz);
 			}
+
 			if (random.nextInt(110) == 0)
 				world.playSound(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(("entity.ender_dragon.ambient"))),
@@ -150,10 +139,14 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 					(double) (bph.getFrontTopLeft().getY() - bph.getHeight()));
 			return new TeleporterDimensionMod(nextWorld, new Vec3d(d1, d2, 0), bph.getForwards());
 		}
+
 	public static class Size /* failed to load code for net.minecraft.block.NetherPortalBlock */
+
 }
 		private static PointOfInterestType poi = null;
+
 		public static final TicketType<BlockPos> CUSTOM_PORTAL = TicketType.create("simons_dimension_portal", Vec3i::compareTo, 300);
+
 		@SubscribeEvent
 		public void registerPointOfInterest(RegistryEvent.Register<PointOfInterestType> event) {
 			try {
@@ -167,48 +160,63 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 				e.printStackTrace();
 			}
 		}
+
 		public static class TeleporterDimensionMod implements ITeleporter {
+
 			private Vec3d lastPortalVec;
 			private Direction teleportDirection;
+
 			protected final ServerWorld world;
 			protected final Random random;
+
 			public TeleporterDimensionMod(ServerWorld worldServer, Vec3d lastPortalVec, Direction teleportDirection) {
 				this.world = worldServer;
 				this.random = new Random(worldServer.getSeed());
+
 				this.lastPortalVec = lastPortalVec;
 				this.teleportDirection = teleportDirection;
 			}
 
 			/* failed to load code for net.minecraft.world.Teleporter */
+
 			/* failed to load code for net.minecraft.world.Teleporter */
+
 			/* failed to load code for net.minecraft.world.Teleporter */
+
 			@Override
 			public Entity placeEntity(Entity entity, ServerWorld serverworld, ServerWorld serverworld1, float yaw,
 					Function<Boolean, Entity> repositionEntity) {
 				double d0 = entity.getPosX();
 				double d1 = entity.getPosY();
 				double d2 = entity.getPosZ();
+
 				if (entity instanceof ServerPlayerEntity) {
 					entity.setLocationAndAngles(d0, d1, d2, yaw, entity.rotationPitch);
+
 					if (!this.placeInPortal(entity, yaw)) {
 						this.makePortal(entity);
 						this.placeInPortal(entity, yaw);
 					}
+
 					entity.setWorld(serverworld1);
 					serverworld1.addDuringPortalTeleport((ServerPlayerEntity) entity);
 					((ServerPlayerEntity) entity).connection.setPlayerLocation(entity.getPosX(), entity.getPosY(), entity.getPosZ(), yaw,
 							entity.rotationPitch);
+
 					return entity;
 				} else {
 					Vec3d vec3d = entity.getMotion();
 					BlockPos blockpos = new BlockPos(d0, d1, d2);
+
 					BlockPattern.PortalInfo blockpattern$portalinfo = this.placeInExistingPortal(blockpos, vec3d, teleportDirection, lastPortalVec.x,
 							lastPortalVec.y, entity instanceof PlayerEntity);
 					if (blockpattern$portalinfo == null)
 						return null;
+
 					blockpos = new BlockPos(blockpattern$portalinfo.pos);
 					vec3d = blockpattern$portalinfo.motion;
 					float f = (float) blockpattern$portalinfo.rotation;
+
 					Entity entityNew = entity.getType().create(serverworld1);
 					if (entityNew != null) {
 						entityNew.copyDataFromOld(entity);
@@ -216,66 +224,88 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 						entityNew.setMotion(vec3d);
 						serverworld1.addFromAnotherDimension(entityNew);
 					}
+
 					return entityNew;
 				}
 			}
+
 		}
 
 		public static class CustomModDimension extends ModDimension {
+
 			@Override
 			public BiFunction<World, DimensionType, ? extends Dimension> getFactory() {
 				return CustomDimension::new;
 			}
+
 		}
 
 	public static class CustomDimension extends Dimension {
+
 		private BiomeProviderCustom biomeProviderCustom = null;
+
 		public CustomDimension(World world, DimensionType type) {
 			super(world, type, 0.5f);
 			this.nether = false;
 		}
+
 		@Override public void calculateInitialWeather() {
 		}
+
     	@Override public void updateWeather(Runnable defaultWeather) {
 		}
+
 		@Override public boolean canDoLightning(Chunk chunk) {
 			return false;
 		}
+
 		@Override public boolean canDoRainSnowIce(Chunk chunk) {
 			return false;
 		}
+
 		@Override @OnlyIn(Dist.CLIENT) public Vec3d getFogColor(float cangle, float ticks) {
 			return new Vec3d(0,0,0);
 		}
+
 		@Override public ChunkGenerator<?> createChunkGenerator() {
 			if(this.biomeProviderCustom == null) {
 				this.biomeProviderCustom = new BiomeProviderCustom(this.world);
 			}
 			return new ChunkProviderModded(this.world, this.biomeProviderCustom);
 		}
+
 		@Override public boolean isSurfaceWorld() {
 			return false;
 		}
+
 		@Override public boolean canRespawnHere() {
 			return false;
 		}
+
 		@OnlyIn(Dist.CLIENT) @Override public boolean doesXZShowFog(int x, int z) {
 			return false;
 		}
+
 		@Override public SleepResult canSleepAt(PlayerEntity player, BlockPos pos){
         	return SleepResult.BED_EXPLODES;
 		}
+
 		@Nullable public BlockPos findSpawn(ChunkPos chunkPos, boolean checkValid) {
    		   return null;
    		}
+
    		@Nullable public BlockPos findSpawn(int x, int z, boolean checkValid) {
    		   return null;
    		}
+
 		@Override public boolean doesWaterVaporize() {
       		return true;
    		}
+
 		@Override /* failed to load code for net.minecraft.world.dimension.OverworldDimension */
+
 	}
+
 		@SubscribeEvent
 		public void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
 			Entity entity = event.getPlayer();
@@ -283,18 +313,23 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
+
 			if (event.getTo() == type) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
+
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
 					$_dependencies.put("world", world);
+
 					SimonsDimensionPlayerEntersDimensionProcedure.executeProcedure($_dependencies);
 				}
 			}
 		}
+
 		public static class ChunkProviderModded extends OverworldChunkGenerator {
+
 			public ChunkProviderModded(IWorld world, BiomeProvider provider) {
 				super(world, provider, new OverworldGenSettings() {
 					public BlockState getDefaultBlock() {
@@ -311,21 +346,29 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 			@Override
 			public void spawnMobs(ServerWorld worldIn, boolean spawnHostileMobs, boolean spawnPeacefulMobs) {
 			}
+
 		}
 
 		public static class BiomeLayerCustom implements IC0Transformer {
+
 			@Override
 			public int apply(INoiseRandom context, int value) {
 				return Registry.BIOME.getId(dimensionBiomes[context.random(dimensionBiomes.length)]);
 			}
+
 		}
 
 		public static class BiomeProviderCustom extends BiomeProvider {
+
 			private Layer genBiomes;
+
 			private static boolean biomesPatched = false;
+
 			public BiomeProviderCustom(World world) {
 				super(new HashSet<Biome>(Arrays.asList(dimensionBiomes)));
+
 				this.genBiomes = getBiomeLayer(world.getSeed());
+
 				if (!biomesPatched) {
 					for (Biome biome : this.biomes) {
 						biome.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(new CaveWorldCarver(ProbabilityConfig::deserialize, 256) {
@@ -346,15 +389,20 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 
 			private Layer getBiomeLayer(long seed) {
 				LongFunction<IExtendedNoiseRandom<LazyArea>> contextFactory = l -> new LazyAreaLayerContext(25, seed, l);
+
 				IAreaFactory<LazyArea> parentLayer = IslandLayer.INSTANCE.apply(contextFactory.apply(1));
 				IAreaFactory<LazyArea> biomeLayer = (new BiomeLayerCustom()).apply(contextFactory.apply(200), parentLayer);
+
 				biomeLayer = ZoomLayer.NORMAL.apply(contextFactory.apply(1000), biomeLayer);
 				biomeLayer = ZoomLayer.NORMAL.apply(contextFactory.apply(1001), biomeLayer);
 				biomeLayer = ZoomLayer.NORMAL.apply(contextFactory.apply(1002), biomeLayer);
 				biomeLayer = ZoomLayer.NORMAL.apply(contextFactory.apply(1003), biomeLayer);
 				biomeLayer = ZoomLayer.NORMAL.apply(contextFactory.apply(1004), biomeLayer);
 				biomeLayer = ZoomLayer.NORMAL.apply(contextFactory.apply(1005), biomeLayer);
+
 				return new Layer(biomeLayer);
 			}
+
 		}
+
 }

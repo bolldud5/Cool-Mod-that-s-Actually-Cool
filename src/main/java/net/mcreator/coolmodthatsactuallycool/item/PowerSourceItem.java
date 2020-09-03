@@ -1,16 +1,12 @@
 
 package net.mcreator.coolmodthatsactuallycool.item;
 
-import org.omg.CORBA.ObjectHolder;
-
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.List;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class PowerSourceItem extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:power_source")
 	public static final Item block = null;
+
 	public PowerSourceItem(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 7);
 	}
@@ -19,7 +15,9 @@ public class PowerSourceItem extends CoolModThatsActuallyCoolModElements.ModElem
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxDamage(32));
 			setRegistryName("power_source");
@@ -60,5 +58,7 @@ public class PowerSourceItem extends CoolModThatsActuallyCoolModElements.ModElem
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Emanates seemingly infinite power."));
 		}
+
 	}
+
 }

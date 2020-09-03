@@ -1,21 +1,17 @@
 
 package net.mcreator.coolmodthatsactuallycool.block;
 
-import org.omg.CORBA.ObjectHolder;
-
 import net.minecraft.block.material.Material;
-
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.List;
-import java.util.Collections;
 
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class AngeredObsidianBricksBlock extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:angered_obsidian_bricks")
 	public static final Block block = null;
+
 	public AngeredObsidianBricksBlock(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 16);
+
 	}
 
 	@Override
@@ -24,10 +20,15 @@ public class AngeredObsidianBricksBlock extends CoolModThatsActuallyCoolModEleme
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 64000f).lightValue(11).harvestLevel(3)
-					.harvestTool(ToolType.PICKAXE));
+			super(
+
+					Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 64000f).lightValue(11).harvestLevel(3)
+							.harvestTool(ToolType.PICKAXE));
+
 			setRegistryName("angered_obsidian_bricks");
 		}
 
@@ -43,10 +44,13 @@ public class AngeredObsidianBricksBlock extends CoolModThatsActuallyCoolModEleme
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
+
 	}
+
 }

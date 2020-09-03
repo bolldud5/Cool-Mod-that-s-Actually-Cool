@@ -1,13 +1,11 @@
 package net.mcreator.coolmodthatsactuallycool.procedures;
 
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Map;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class GlowlMobplayerCollidesBlockProcedure extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	public GlowlMobplayerCollidesBlockProcedure(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 15);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -15,7 +13,11 @@ public class GlowlMobplayerCollidesBlockProcedure extends CoolModThatsActuallyCo
 			System.err.println("Failed to load dependency entity for procedure GlowlMobplayerCollidesBlock!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
+
 		entity.attackEntityFrom(DamageSource.WITHER, (float) 5);
+
 	}
+
 }

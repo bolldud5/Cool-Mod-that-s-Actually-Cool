@@ -1,13 +1,11 @@
 package net.mcreator.coolmodthatsactuallycool.procedures;
 
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Map;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class IronRemnantEntityIsHurtProcedure extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	public IronRemnantEntityIsHurtProcedure(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 6);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -27,12 +25,16 @@ public class IronRemnantEntityIsHurtProcedure extends CoolModThatsActuallyCoolMo
 			System.err.println("Failed to load dependency world for procedure IronRemnantEntityIsHurt!");
 			return;
 		}
+
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(ParticleTypes.LARGE_SMOKE, x, y, z, (int) 15, 0, 0, 0, 0.5);
 		}
+
 	}
+
 }

@@ -1,22 +1,18 @@
 
 package net.mcreator.coolmodthatsactuallycool.potion;
 
-import org.omg.CORBA.ObjectHolder;
-
-import net.mcreator.coolmodthatsactuallycool.procedures.BloatedEffectOnPotionActiveTickProcedure;
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class BloatedEffectPotion extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:bloated_effect")
 	public static final Effect potion = null;
+
 	@ObjectHolder("cool_mod_thats_actually_cool:bloated_effect")
 	public static final Potion potionType = null;
+
 	public BloatedEffectPotion(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 2);
+
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -29,15 +25,20 @@ public class BloatedEffectPotion extends CoolModThatsActuallyCoolModElements.Mod
 	public void registerPotion(RegistryEvent.Register<Potion> event) {
 		event.getRegistry().register(new PotionCustom());
 	}
+
 	public static class PotionCustom extends Potion {
+
 		public PotionCustom() {
 			super(new EffectInstance(potion, 3600));
 			setRegistryName("bloated_effect");
 		}
+
 	}
 
 	public static class EffectCustom extends Effect {
+
 		private final ResourceLocation potionIcon;
+
 		public EffectCustom() {
 			super(EffectType.HARMFUL, -7077706);
 			setRegistryName("bloated_effect");
@@ -82,7 +83,9 @@ public class BloatedEffectPotion extends CoolModThatsActuallyCoolModElements.Mod
 			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
+
 				BloatedEffectOnPotionActiveTickProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -91,5 +94,7 @@ public class BloatedEffectPotion extends CoolModThatsActuallyCoolModElements.Mod
 		public boolean isReady(int duration, int amplifier) {
 			return true;
 		}
+
 	}
+
 }

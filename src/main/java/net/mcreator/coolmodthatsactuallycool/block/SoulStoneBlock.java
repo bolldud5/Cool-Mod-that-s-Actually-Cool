@@ -1,25 +1,17 @@
 
 package net.mcreator.coolmodthatsactuallycool.block;
 
-import org.omg.CORBA.ObjectHolder;
-
 import net.minecraft.block.material.Material;
-
-import net.mcreator.coolmodthatsactuallycool.procedures.SoulStoneEntityWalksOnTheBlockProcedure;
-import net.mcreator.coolmodthatsactuallycool.procedures.SoulStoneBlockDestroyedByPlayerProcedure;
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Collections;
 
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class SoulStoneBlock extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:soul_stone")
 	public static final Block block = null;
+
 	public SoulStoneBlock(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 20);
+
 	}
 
 	@Override
@@ -28,10 +20,15 @@ public class SoulStoneBlock extends CoolModThatsActuallyCoolModElements.ModEleme
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
+
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(0.7999999999999999f, 10f).lightValue(1)
-					.harvestLevel(-1).harvestTool(ToolType.PICKAXE));
+			super(
+
+					Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(0.7999999999999999f, 10f).lightValue(1)
+							.harvestLevel(-1).harvestTool(ToolType.PICKAXE));
+
 			setRegistryName("soul_stone");
 		}
 
@@ -42,6 +39,7 @@ public class SoulStoneBlock extends CoolModThatsActuallyCoolModElements.ModEleme
 
 		@Override
 		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
@@ -56,11 +54,13 @@ public class SoulStoneBlock extends CoolModThatsActuallyCoolModElements.ModEleme
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
+
 				SoulStoneBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
@@ -74,9 +74,13 @@ public class SoulStoneBlock extends CoolModThatsActuallyCoolModElements.ModEleme
 			int z = pos.getZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
+
 				SoulStoneEntityWalksOnTheBlockProcedure.executeProcedure($_dependencies);
 			}
 		}
+
 	}
+
 }

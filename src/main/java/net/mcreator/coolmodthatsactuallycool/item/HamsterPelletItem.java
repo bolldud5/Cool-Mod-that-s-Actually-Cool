@@ -1,19 +1,12 @@
 
 package net.mcreator.coolmodthatsactuallycool.item;
 
-import org.omg.CORBA.ObjectHolder;
-
-import net.mcreator.coolmodthatsactuallycool.procedures.HamsterPelletItemIsCraftedsmeltedProcedure;
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class HamsterPelletItem extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:hamster_pellet")
 	public static final Item block = null;
+
 	public HamsterPelletItem(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 8);
 	}
@@ -22,7 +15,9 @@ public class HamsterPelletItem extends CoolModThatsActuallyCoolModElements.ModEl
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(64));
 			setRegistryName("hamster_pellet");
@@ -57,12 +52,16 @@ public class HamsterPelletItem extends CoolModThatsActuallyCoolModElements.ModEl
 			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
+
 				HamsterPelletItemIsCraftedsmeltedProcedure.executeProcedure($_dependencies);
 			}
 		}
+
 	}
+
 }
