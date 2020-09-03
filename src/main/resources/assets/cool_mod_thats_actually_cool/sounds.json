@@ -1,10 +1,10 @@
 {
-  "program1": {
-    "category": "record",
+  "block.s-portal.enter": {
+    "category": "ambient",
     "sounds": [
       {
-        "name": "cool_mod_thats_actually_cool:mind-in-a-program-medley",
-        "stream": true
+        "name": "cool_mod_thats_actually_cool:simonportalsound",
+        "stream": false
       }
     ]
   },
@@ -13,33 +13,6 @@
     "sounds": [
       {
         "name": "cool_mod_thats_actually_cool:small-fireball-soundbible.com-1381880822",
-        "stream": false
-      }
-    ]
-  },
-  "fortress_death": {
-    "category": "master",
-    "sounds": [
-      {
-        "name": "cool_mod_thats_actually_cool:shell_break",
-        "stream": false
-      }
-    ]
-  },
-  "mob.sandsnail.ambient": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "cool_mod_thats_actually_cool:zapsplat_household_necklace_beaded_set_down_in_ceramic_bowl_or_surface_001_39946",
-        "stream": false
-      }
-    ]
-  },
-  "mob.hamster.hurt": {
-    "category": "hostile",
-    "sounds": [
-      {
-        "name": "cool_mod_thats_actually_cool:squaek2",
         "stream": false
       }
     ]
@@ -53,20 +26,47 @@
       }
     ]
   },
-  "block.s-portal.enter": {
-    "category": "ambient",
-    "sounds": [
-      {
-        "name": "cool_mod_thats_actually_cool:simonportalsound",
-        "stream": false
-      }
-    ]
-  },
   "mob.soulzombie.ambient": {
     "category": "hostile",
     "sounds": [
       {
         "name": "cool_mod_thats_actually_cool:eq_pitch_minecraft-zombie2",
+        "stream": false
+      }
+    ]
+  },
+  "program1": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:mind-in-a-program-medley",
+        "stream": true
+      }
+    ]
+  },
+  "mob.sandsnail.ambient": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:zapsplat_household_necklace_beaded_set_down_in_ceramic_bowl_or_surface_001_39946",
+        "stream": false
+      }
+    ]
+  },
+  "fortress_death": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:shell_break",
+        "stream": false
+      }
+    ]
+  },
+  "mob.hamster.hurt": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "cool_mod_thats_actually_cool:squaek2",
         "stream": false
       }
     ]

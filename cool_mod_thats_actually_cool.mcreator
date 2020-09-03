@@ -2,30 +2,22 @@
   "id_map": {},
   "mod_elements": [
     {
-      "name": "PROGRAMMedley",
-      "type": "musicdisc",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "program_medley"
-    },
-    {
-      "name": "BloatedEffectOnPotionActiveTick",
-      "type": "procedure",
+      "name": "Blote",
+      "type": "mob",
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "bloated_effect_on_potion_active_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
+      "registry_name": "blote"
+    },
+    {
+      "name": "Dirt2Diamonds",
+      "type": "recipe",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_2_diamonds"
     },
     {
       "name": "BloatedEffect",
@@ -37,202 +29,6 @@
       "registry_name": "bloated_effect"
     },
     {
-      "name": "BloteMeatFoodEaten",
-      "type": "procedure",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blote_meat_food_eaten",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "BloteMeatItemIsCraftedsmelted",
-      "type": "procedure",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blote_meat_item_is_craftedsmelted",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "BloteMeat",
-      "type": "food",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blote_meat"
-    },
-    {
-      "name": "CactusSpineWeapon",
-      "type": "gun",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "cactus_spine_weapon"
-    },
-    {
-      "name": "SandSnail",
-      "type": "mob",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sand_snail"
-    },
-    {
-      "name": "IronRemnant",
-      "type": "mob",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "iron_remnant"
-    },
-    {
-      "name": "IronRemnantEntityIsHurt",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "iron_remnant_entity_is_hurt",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "PowerSource",
-      "type": "item",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "power_source"
-    },
-    {
-      "name": "IronRemnantEntityDies",
-      "type": "procedure",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "iron_remnant_entity_dies",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Hamster",
-      "type": "mob",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hamster"
-    },
-    {
-      "name": "HamsterPelletItemIsCraftedsmelted",
-      "type": "procedure",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hamster_pellet_item_is_craftedsmelted",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "HamsterPellet",
-      "type": "item",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hamster_pellet"
-    },
-    {
       "name": "Power2Pellets",
       "type": "recipe",
       "sortid": 8,
@@ -240,79 +36,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "power_2_pellets"
-    },
-    {
-      "name": "HamsterLauncherRangedItemUsed",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hamster_launcher_ranged_item_used",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "HamsterLauncherBulletHitsBlock",
-      "type": "procedure",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hamster_launcher_bullet_hits_block",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "HamsterLaunching",
-      "type": "gun",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hamster_launching"
-    },
-    {
-      "name": "SimonsDimension",
-      "type": "dimension",
-      "sortid": 13,
-      "compiles": false,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "simons_dimension"
-    },
-    {
-      "name": "AngeredObsidian",
-      "type": "block",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "angered_obsidian"
     },
     {
       "name": "GlowlMobplayerCollidesBlock",
@@ -341,69 +64,21 @@
       "registry_name": "glowl"
     },
     {
-      "name": "AngeredObsidianBricks",
-      "type": "block",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "angered_obsidian_bricks"
-    },
-    {
-      "name": "AncientRuinsBiome",
-      "type": "biome",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ancient_ruins_biome"
-    },
-    {
-      "name": "Diat",
-      "type": "block",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "diat"
-    },
-    {
-      "name": "SimonsDimensionPlayerEntersDimension",
+      "name": "SoulStoneEntityWalksOnTheBlock",
       "type": "procedure",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "simons_dimension_player_enters_dimension",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SoulStone",
-      "type": "block",
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "soul_stone"
+      "registry_name": "soul_stone_entity_walks_on_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     },
     {
       "name": "SoulStoneBlockDestroyedByPlayer",
@@ -439,13 +114,13 @@
       }
     },
     {
-      "name": "SoulStoneEntityWalksOnTheBlock",
+      "name": "BloteMeatFoodEaten",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "soul_stone_entity_walks_on_the_block",
+      "registry_name": "blote_meat_food_eaten",
       "metadata": {
         "dependencies": [
           {
@@ -454,47 +129,12 @@
           }
         ]
       }
-    },
-    {
-      "name": "SoulDesert",
-      "type": "biome",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "soul_desert"
-    },
-    {
-      "name": "SoulZombieOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "soul_zombie_on_initial_entity_spawn",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SoulZombie",
-      "type": "mob",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "soul_zombie"
     },
     {
       "name": "SoulZombieEntityIsHurt",
       "type": "procedure",
       "sortid": 23,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "soul_zombie_entity_is_hurt",
@@ -524,13 +164,132 @@
       }
     },
     {
-      "name": "DiamondEncrustedObsidian",
-      "type": "block",
-      "sortid": 23,
+      "name": "HamsterLauncherRangedItemUsed",
+      "type": "procedure",
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "diamond_encrusted_obsidian"
+      "registry_name": "hamster_launcher_ranged_item_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DesertWalker",
+      "type": "mob",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_walker"
+    },
+    {
+      "name": "SoulStone",
+      "type": "block",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_stone"
+    },
+    {
+      "name": "BloteMeatItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote_meat_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IronRemnantEntityDies",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_remnant_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PowerSource",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "power_source"
+    },
+    {
+      "name": "SoulZombieOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SimonsDimension",
+      "type": "dimension",
+      "sortid": 13,
+      "compiles": false,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simons_dimension"
     },
     {
       "name": "DesertWalkerOnEntityTickUpdate",
@@ -540,6 +299,229 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "desert_walker_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloatedEffectOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloated_effect_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SandSnail",
+      "type": "mob",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sand_snail"
+    },
+    {
+      "name": "AngeredObsidianBricks",
+      "type": "block",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angered_obsidian_bricks"
+    },
+    {
+      "name": "SoulDesert",
+      "type": "biome",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_desert"
+    },
+    {
+      "name": "PROGRAMMedley",
+      "type": "musicdisc",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "program_medley"
+    },
+    {
+      "name": "HamsterPelletItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_pellet_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondEncrustedObsidian",
+      "type": "block",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_encrusted_obsidian"
+    },
+    {
+      "name": "AncientRuinsBiome",
+      "type": "biome",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ancient_ruins_biome"
+    },
+    {
+      "name": "IronRemnantEntityIsHurt",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_remnant_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SimonsDimensionPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "simons_dimension_player_enters_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HamsterPellet",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_pellet"
+    },
+    {
+      "name": "IronRemnant",
+      "type": "mob",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_remnant"
+    },
+    {
+      "name": "SoulZombie",
+      "type": "mob",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie"
+    },
+    {
+      "name": "AngeredObsidian",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "angered_obsidian"
+    },
+    {
+      "name": "HamsterLauncherBulletHitsBlock",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_launcher_bullet_hits_block",
       "metadata": {
         "dependencies": [
           {
@@ -579,39 +561,57 @@
       }
     },
     {
-      "name": "DesertWalker",
-      "type": "mob",
-      "sortid": 24,
+      "name": "CactusSpineWeapon",
+      "type": "gun",
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "desert_walker"
+      "registry_name": "cactus_spine_weapon"
     },
     {
-      "name": "Blote",
-      "type": "mob",
+      "name": "Diat",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diat"
+    },
+    {
+      "name": "HamsterLaunching",
+      "type": "gun",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamster_launching"
+    },
+    {
+      "name": "BloteMeat",
+      "type": "food",
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "blote"
+      "registry_name": "blote_meat"
     },
     {
-      "name": "Dirt2Diamonds",
-      "type": "recipe",
-      "sortid": 1,
+      "name": "Hamster",
+      "type": "mob",
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "dirt_2_diamonds"
+      "registry_name": "hamster"
     }
   ],
   "variable_elements": [],
   "sound_elements": [
     {
-      "name": "program1",
-      "file": "mind-in-a-program-medley",
-      "category": "record"
+      "name": "block.s-portal.enter",
+      "file": "simonportalsound",
+      "category": "ambient"
     },
     {
       "name": "item.blotemeat.sizzle",
@@ -619,9 +619,19 @@
       "category": "ambient"
     },
     {
-      "name": "fortress_death",
-      "file": "shell_break",
-      "category": "master"
+      "name": "mob.hamster.death",
+      "file": "squeak3",
+      "category": "neutral"
+    },
+    {
+      "name": "mob.soulzombie.ambient",
+      "file": "eq_pitch_minecraft-zombie2",
+      "category": "hostile"
+    },
+    {
+      "name": "program1",
+      "file": "mind-in-a-program-medley",
+      "category": "record"
     },
     {
       "name": "mob.sandsnail.ambient",
@@ -629,23 +639,13 @@
       "category": "neutral"
     },
     {
+      "name": "fortress_death",
+      "file": "shell_break",
+      "category": "master"
+    },
+    {
       "name": "mob.hamster.hurt",
       "file": "squaek2",
-      "category": "hostile"
-    },
-    {
-      "name": "mob.hamster.death",
-      "file": "squeak3",
-      "category": "neutral"
-    },
-    {
-      "name": "block.s-portal.enter",
-      "file": "simonportalsound",
-      "category": "ambient"
-    },
-    {
-      "name": "mob.soulzombie.ambient",
-      "file": "eq_pitch_minecraft-zombie2",
       "category": "hostile"
     }
   ],
@@ -696,7 +696,6 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.coolmodthatsactuallycool",
     "lockBaseModFiles": false
   },

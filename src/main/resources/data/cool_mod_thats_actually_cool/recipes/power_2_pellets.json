@@ -3,11 +3,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "cool_mod_thats_actually_cool:unknown_element"
+      "item": "cool_mod_thats_actually_cool:power_source"
     }
   ],
   "result": {
-    "item": "cool_mod_thats_actually_cool:unknown_element",
+    "item": "cool_mod_thats_actually_cool:hamster_pellet",
     "count": 1
   }
 }
