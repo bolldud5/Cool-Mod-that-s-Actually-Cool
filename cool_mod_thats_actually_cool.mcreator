@@ -134,7 +134,7 @@
       "name": "SoulZombieEntityIsHurt",
       "type": "procedure",
       "sortid": 23,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "soul_zombie_entity_is_hurt",
