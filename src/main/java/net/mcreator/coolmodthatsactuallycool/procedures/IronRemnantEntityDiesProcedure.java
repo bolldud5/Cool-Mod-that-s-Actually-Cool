@@ -1,11 +1,5 @@
 package net.mcreator.coolmodthatsactuallycool.procedures;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.Explosion;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.item.ItemEntity;
-
 import net.mcreator.coolmodthatsactuallycool.item.PowerSourceItem;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 

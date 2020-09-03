@@ -300,7 +300,7 @@
       "name": "SimonsDimension",
       "type": "dimension",
       "sortid": 13,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "simons_dimension"

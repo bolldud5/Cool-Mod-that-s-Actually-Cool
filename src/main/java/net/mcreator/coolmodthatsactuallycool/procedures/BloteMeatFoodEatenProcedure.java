@@ -1,9 +1,5 @@
 package net.mcreator.coolmodthatsactuallycool.procedures;
 
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
 import net.mcreator.coolmodthatsactuallycool.potion.BloatedEffectPotion;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 

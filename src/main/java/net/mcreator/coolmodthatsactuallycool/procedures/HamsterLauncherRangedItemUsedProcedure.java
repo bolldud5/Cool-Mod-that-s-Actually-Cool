@@ -1,8 +1,5 @@
 package net.mcreator.coolmodthatsactuallycool.procedures;
 
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.entity.Entity;
-
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 
 import java.util.Map;

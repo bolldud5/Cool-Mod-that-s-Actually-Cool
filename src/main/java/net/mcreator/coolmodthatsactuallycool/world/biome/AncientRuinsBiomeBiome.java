@@ -1,32 +1,9 @@
 
 package net.mcreator.coolmodthatsactuallycool.world.biome;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import org.omg.CORBA.ObjectHolder;
 
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
-import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
-import net.minecraft.world.gen.feature.AbstractTreeFeature;
-import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.IWorldGenerationReader;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorldWriter;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.MutableBoundingBox;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
 
 import net.mcreator.coolmodthatsactuallycool.block.AngeredObsidianBricksBlock;
 import net.mcreator.coolmodthatsactuallycool.block.AngeredObsidianBlock;
