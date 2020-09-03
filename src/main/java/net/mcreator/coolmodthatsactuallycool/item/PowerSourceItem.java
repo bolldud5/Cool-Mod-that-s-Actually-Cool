@@ -1,25 +1,12 @@
 
 package net.mcreator.coolmodthatsactuallycool.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.List;
-
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class PowerSourceItem extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:power_source")
 	public static final Item block = null;
+
 	public PowerSourceItem(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 7);
 	}
@@ -28,7 +15,9 @@ public class PowerSourceItem extends CoolModThatsActuallyCoolModElements.ModElem
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxDamage(32));
 			setRegistryName("power_source");
@@ -69,5 +58,7 @@ public class PowerSourceItem extends CoolModThatsActuallyCoolModElements.ModElem
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Emanates seemingly infinite power."));
 		}
+
 	}
+
 }

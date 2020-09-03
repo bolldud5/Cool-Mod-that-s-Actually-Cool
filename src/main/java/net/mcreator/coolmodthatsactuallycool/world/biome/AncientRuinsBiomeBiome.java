@@ -1,44 +1,14 @@
 
 package net.mcreator.coolmodthatsactuallycool.world.biome;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
-import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
-import net.minecraft.world.gen.feature.AbstractTreeFeature;
-import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.IWorldGenerationReader;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorldWriter;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.MutableBoundingBox;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.mcreator.coolmodthatsactuallycool.block.AngeredObsidianBricksBlock;
-import net.mcreator.coolmodthatsactuallycool.block.AngeredObsidianBlock;
-import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
-
-import java.util.Set;
-import java.util.Random;
 
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.ModElement {
+
 	@ObjectHolder("cool_mod_thats_actually_cool:ancient_ruins_biome")
 	public static final CustomBiome biome = null;
+
 	public AncientRuinsBiomeBiome(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 17);
 	}
@@ -51,23 +21,29 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}
+
 	static class CustomBiome extends Biome {
+
 		public CustomBiome() {
 			super(new Biome.Builder().downfall(0f).depth(0.1f).scale(0.1f).temperature(0.5f).precipitation(Biome.RainType.NONE)
 					.category(Biome.Category.NONE).waterColor(-10066330).waterFogColor(-10066330)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(AngeredObsidianBricksBlock.block.getDefaultState(),
-							AngeredObsidianBlock.block.getDefaultState(), AngeredObsidianBlock.block.getDefaultState())));
+							AngeredObsidianItem.block.getDefaultState(), AngeredObsidianItem.block.getDefaultState())));
+
 			setRegistryName("ancient_ruins_biome");
+
 			DefaultBiomeFeatures.addCarvers(this);
 			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addMonsterRooms(this);
 			DefaultBiomeFeatures.addOres(this);
+
 			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, new CustomTreeFeature()
 					.withConfiguration(
 							(new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(AngeredObsidianBricksBlock.block.getDefaultState()),
 									new SimpleBlockStateProvider(AngeredObsidianBricksBlock.block.getDefaultState()))).baseHeight(1)
 											.setSapling((net.minecraftforge.common.IPlantable) Blocks.JUNGLE_SAPLING).build())
 					.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(20, 0.1F, 1))));
+
 		}
 
 		@OnlyIn(Dist.CLIENT)
@@ -87,9 +63,11 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 		public int getSkyColor() {
 			return -16777216;
 		}
+
 	}
 
 	static class CustomTreeFeature extends AbstractTreeFeature<BaseTreeFeatureConfig> {
+
 		CustomTreeFeature() {
 			super(BaseTreeFeatureConfig::deserialize);
 		}
@@ -99,16 +77,22 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 				Set<BlockPos> changedBlocks2, MutableBoundingBox bbox, BaseTreeFeatureConfig conf) {
 			if (!(worldgen instanceof IWorld))
 				return false;
+
 			IWorld world = (IWorld) worldgen;
+
 			int height = rand.nextInt(5) + 1;
 			boolean spawnTree = true;
+
 			if (position.getY() >= 1 && position.getY() + height + 1 <= world.getHeight()) {
 				for (int j = position.getY(); j <= position.getY() + 1 + height; j++) {
 					int k = 1;
+
 					if (j == position.getY())
 						k = 0;
+
 					if (j >= position.getY() + height - 1)
 						k = 2;
+
 					for (int px = position.getX() - k; px <= position.getX() + k && spawnTree; px++) {
 						for (int pz = position.getZ() - k; pz <= position.getZ() + k && spawnTree; pz++) {
 							if (j >= 0 && j < world.getHeight()) {
@@ -127,22 +111,27 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 					Block ground = world.getBlockState(position.add(0, -1, 0)).getBlock();
 					Block ground2 = world.getBlockState(position.add(0, -2, 0)).getBlock();
 					if (!((ground == AngeredObsidianBricksBlock.block.getDefaultState().getBlock()
-							|| ground == AngeredObsidianBlock.block.getDefaultState().getBlock())
+							|| ground == AngeredObsidianItem.block.getDefaultState().getBlock())
 							&& (ground2 == AngeredObsidianBricksBlock.block.getDefaultState().getBlock()
-									|| ground2 == AngeredObsidianBlock.block.getDefaultState().getBlock())))
+									|| ground2 == AngeredObsidianItem.block.getDefaultState().getBlock())))
 						return false;
+
 					BlockState state = world.getBlockState(position.down());
 					if (position.getY() < world.getHeight() - height - 1) {
-						setTreeBlockState(changedBlocks, world, position.down(), AngeredObsidianBlock.block.getDefaultState(), bbox);
+						setTreeBlockState(changedBlocks, world, position.down(), AngeredObsidianItem.block.getDefaultState(), bbox);
+
 						for (int genh = position.getY() - 3 + height; genh <= position.getY() + height; genh++) {
 							int i4 = genh - (position.getY() + height);
 							int j1 = (int) (1 - i4 * 0.5);
+
 							for (int k1 = position.getX() - j1; k1 <= position.getX() + j1; ++k1) {
 								for (int i2 = position.getZ() - j1; i2 <= position.getZ() + j1; ++i2) {
 									int j2 = i2 - position.getZ();
+
 									if (Math.abs(position.getX()) != j1 || Math.abs(j2) != j1 || rand.nextInt(2) != 0 && i4 != 0) {
 										BlockPos blockpos = new BlockPos(k1, genh, i2);
 										state = world.getBlockState(blockpos);
+
 										if (state.getBlock().isAir(state, world, blockpos) || state.getMaterial().blocksMovement()
 												|| state.isIn(BlockTags.LEAVES) || state.getBlock() == Blocks.AIR.getDefaultState().getBlock()
 												|| state.getBlock() == AngeredObsidianBricksBlock.block.getDefaultState().getBlock()) {
@@ -153,15 +142,20 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 								}
 							}
 						}
+
 						for (int genh = 0; genh < height; genh++) {
 							BlockPos genhPos = position.up(genh);
 							state = world.getBlockState(genhPos);
+
 							setTreeBlockState(changedBlocks, world, genhPos, AngeredObsidianBricksBlock.block.getDefaultState(), bbox);
+
 							if (state.getBlock().isAir(state, world, genhPos) || state.getMaterial().blocksMovement() || state.isIn(BlockTags.LEAVES)
 									|| state.getBlock() == Blocks.AIR.getDefaultState().getBlock()
 									|| state.getBlock() == AngeredObsidianBricksBlock.block.getDefaultState().getBlock()) {
+
 							}
 						}
+
 						if (rand.nextInt(4) == 0 && height > 5) {
 							for (int hlevel = 0; hlevel < 2; hlevel++) {
 								for (Direction Direction : Direction.Plane.HORIZONTAL) {
@@ -173,6 +167,7 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 								}
 							}
 						}
+
 						return true;
 					} else {
 						return false;
@@ -197,7 +192,7 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 					|| blockType == AngeredObsidianBricksBlock.block.getDefaultState().getBlock()
 					|| blockType == AngeredObsidianBricksBlock.block.getDefaultState().getBlock()
 					|| blockType == AngeredObsidianBricksBlock.block.getDefaultState().getBlock()
-					|| blockType == AngeredObsidianBlock.block.getDefaultState().getBlock();
+					|| blockType == AngeredObsidianItem.block.getDefaultState().getBlock();
 		}
 
 		private boolean isReplaceable(IWorld world, BlockPos pos) {
@@ -209,5 +204,7 @@ public class AncientRuinsBiomeBiome extends CoolModThatsActuallyCoolModElements.
 			super.func_227217_a_(world, pos, state, mbb);
 			changedBlocks.add(pos.toImmutable());
 		}
+
 	}
+
 }
