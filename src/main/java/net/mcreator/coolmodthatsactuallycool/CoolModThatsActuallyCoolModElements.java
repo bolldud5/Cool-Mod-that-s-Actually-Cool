@@ -47,22 +47,22 @@ public class CoolModThatsActuallyCoolModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public CoolModThatsActuallyCoolModElements() {
-		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "program1"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "program1")));
-		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "item.blotemeat.sizzle"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "item.blotemeat.sizzle")));
-		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "fortress_death"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "fortress_death")));
-		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.sandsnail.ambient"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.sandsnail.ambient")));
-		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.hurt"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.hurt")));
-		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.death"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.death")));
 		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "block.s-portal.enter"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "block.s-portal.enter")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "item.blotemeat.sizzle"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "item.blotemeat.sizzle")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.death"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.death")));
 		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.soulzombie.ambient"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.soulzombie.ambient")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "program1"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "program1")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.sandsnail.ambient"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.sandsnail.ambient")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "fortress_death"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "fortress_death")));
+		sounds.put(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.hurt"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("cool_mod_thats_actually_cool", "mob.hamster.hurt")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("cool_mod_thats_actually_cool").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
