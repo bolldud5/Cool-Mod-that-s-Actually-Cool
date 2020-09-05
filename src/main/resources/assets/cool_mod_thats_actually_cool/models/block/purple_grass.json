@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "cool_mod_thats_actually_cool:blocks/blackdirtallsides",
+    "up": "cool_mod_thats_actually_cool:blocks/purplegrasstop",
+    "north": "cool_mod_thats_actually_cool:blocks/purplegrassside",
+    "east": "cool_mod_thats_actually_cool:blocks/purplegrassside",
+    "south": "cool_mod_thats_actually_cool:blocks/purplegrassside",
+    "west": "cool_mod_thats_actually_cool:blocks/purplegrassside",
+    "particle": "cool_mod_thats_actually_cool:blocks/blackdirtallsides"
+  }
+}

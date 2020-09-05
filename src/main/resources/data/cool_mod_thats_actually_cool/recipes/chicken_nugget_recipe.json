@@ -1,0 +1,30 @@
+{
+  "group": "cool_mod_thats_actually_cool",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "3": {
+      "item": "minecraft:bread"
+    },
+    "4": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "5": {
+      "item": "minecraft:light_gray_dye"
+    },
+    "7": {
+      "item": "minecraft:cooked_chicken"
+    }
+  },
+  "result": {
+    "item": "cool_mod_thats_actually_cool:chicken_nugget",
+    "count": 8
+  }
+}
