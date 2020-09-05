@@ -465,6 +465,15 @@
       "registry_name": "soul_desert"
     },
     {
+      "name": "PurpleGrass",
+      "type": "block",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_grass"
+    },
+    {
       "name": "ChickenNugget",
       "type": "food",
       "sortid": 22,
@@ -483,13 +492,145 @@
       "registry_name": "chicken_nugget_recipe"
     },
     {
-      "name": "PurpleGrass",
-      "type": "block",
+      "name": "SoulZombie",
+      "type": "mob",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie"
+    },
+    {
+      "name": "SoulZombieOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Blote",
+      "type": "mob",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blote"
+    },
+    {
+      "name": "DesertWalkerOnEntityTickUpdate",
+      "type": "procedure",
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "purple_grass"
+      "registry_name": "desert_walker_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dirt2Diamonds",
+      "type": "recipe",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_2_diamonds"
+    },
+    {
+      "name": "DesertWalkerOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_walker_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoulZombieEntityIsHurt",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_zombie_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DesertWalker",
+      "type": "mob",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_walker"
+    },
+    {
+      "name": "DiamondEncrustedObsidian",
+      "type": "block",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_encrusted_obsidian"
     }
   ],
   "variable_elements": [],
@@ -528,6 +669,11 @@
       "name": "block.s-portal.enter",
       "file": "simonportalsound",
       "category": "ambient"
+    },
+    {
+      "name": "mob.soulzombie.ambient",
+      "file": "eq_pitch_minecraft-zombie2",
+      "category": "hostile"
     }
   ],
   "language_map": {
@@ -543,11 +689,9 @@
       "item.cool_mod_thats_actually_cool.hamster_launching": "Hamster Launcher",
       "item.cool_mod_thats_actually_cool.blote_meat": "Blote Meat",
       "fluid.glowl": "Glowl",
-      "block.cool_mod_thats_actually_cool.purple_grass": "Purple Grass",
       "item.minecraft.lingering_potion.effect.bloated_effect": "Lingering Bloated",
       "block.cool_mod_thats_actually_cool.angered_obsidian": "Angered Obsidian",
       "item.minecraft.potion.effect.bloated_effect": "Bloated",
-      "item.cool_mod_thats_actually_cool.chicken_nugget": "Chicken Nugget",
       "block.cool_mod_thats_actually_cool.diat": "Diat",
       "item.cool_mod_thats_actually_cool.sand_snail": "Fortress of the Desert Spawn Egg",
       "item.cool_mod_thats_actually_cool.program_medley.desc": "Mind in a PROGRAM Medley",
