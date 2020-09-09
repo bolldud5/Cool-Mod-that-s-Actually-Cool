@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 8,
+    "recipeRetstackSize": 16,
     "group": "",
     "recipeShapeless": false,
     "recipeSlots": [
@@ -25,7 +25,7 @@
         "value": "Items.COOKED_CHICKEN"
       },
       {
-        "value": "Items.DYE#7"
+        "value": "Items.SUGAR"
       },
       {
         "value": ""

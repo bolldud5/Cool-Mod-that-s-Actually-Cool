@@ -1,11 +1,22 @@
 package net.mcreator.coolmodthatsactuallycool.procedures;
 
+import net.minecraft.world.IWorld;
+import net.minecraft.util.Hand;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
+
+import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
+
+import java.util.Map;
+
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class SoulZombieEntityIsHurtProcedure extends CoolModThatsActuallyCoolModElements.ModElement {
-
 	public SoulZombieEntityIsHurtProcedure(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 23);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -29,13 +40,11 @@ public class SoulZombieEntityIsHurtProcedure extends CoolModThatsActuallyCoolMod
 			System.err.println("Failed to load dependency world for procedure SoulZombieEntityIsHurt!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((Math.random() < 0.05)) {
 			if (!world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z,
@@ -65,7 +74,5 @@ public class SoulZombieEntityIsHurtProcedure extends CoolModThatsActuallyCoolMod
 					((ServerPlayerEntity) entity).inventory.markDirty();
 			}
 		}
-
 	}
-
 }

@@ -11,11 +11,11 @@
       "value": "FOOD"
     },
     "stackSize": 64,
-    "nutritionalValue": 5,
-    "saturation": 0.3,
-    "eatingSpeed": 32,
+    "nutritionalValue": 2,
+    "saturation": 1.0,
+    "eatingSpeed": 8,
     "forDogs": true,
-    "isAlwaysEdible": true,
+    "isAlwaysEdible": false,
     "animation": "eat",
     "hasGlow": false
   }

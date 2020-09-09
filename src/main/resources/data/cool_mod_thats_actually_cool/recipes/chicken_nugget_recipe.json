@@ -17,7 +17,7 @@
       "item": "minecraft:cooked_chicken"
     },
     "5": {
-      "item": "minecraft:light_gray_dye"
+      "item": "minecraft:sugar"
     },
     "7": {
       "item": "minecraft:cooked_chicken"
@@ -25,6 +25,6 @@
   },
   "result": {
     "item": "cool_mod_thats_actually_cool:chicken_nugget",
-    "count": 8
+    "count": 16
   }
 }

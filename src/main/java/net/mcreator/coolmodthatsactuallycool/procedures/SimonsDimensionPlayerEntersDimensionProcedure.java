@@ -1,11 +1,20 @@
 package net.mcreator.coolmodthatsactuallycool.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
+
+import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
+
+import java.util.Map;
+
 @CoolModThatsActuallyCoolModElements.ModElement.Tag
 public class SimonsDimensionPlayerEntersDimensionProcedure extends CoolModThatsActuallyCoolModElements.ModElement {
-
 	public SimonsDimensionPlayerEntersDimensionProcedure(CoolModThatsActuallyCoolModElements instance) {
 		super(instance, 19);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -25,12 +34,10 @@ public class SimonsDimensionPlayerEntersDimensionProcedure extends CoolModThatsA
 			System.err.println("Failed to load dependency world for procedure SimonsDimensionPlayerEntersDimension!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (!world.getWorld().isRemote) {
 			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
@@ -42,7 +49,5 @@ public class SimonsDimensionPlayerEntersDimensionProcedure extends CoolModThatsA
 							.getValue(new ResourceLocation("cool_mod_thats_actually_cool:block.s-portal.enter")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 		}
-
 	}
-
 }
