@@ -14,16 +14,16 @@
     "minHeight": 150,
     "spawnVines": false,
     "treeVines": {
-      "value": "Blocks.SOUL_SAND"
+      "value": "CUSTOM:DiamondEncrustedObsidian"
     },
     "treeStem": {
       "value": "CUSTOM:SoulStone"
     },
     "treeBranch": {
-      "value": "CUSTOM:SoulStone"
+      "value": "Blocks.AIR"
     },
     "treeFruits": {
-      "value": "CUSTOM:Diat"
+      "value": "CUSTOM:DiamondEncrustedObsidian"
     },
     "airColor": {
       "value": -13293278,

@@ -30,7 +30,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.coolmodthatsactuallycool.block.SoulStoneBlock;
-import net.mcreator.coolmodthatsactuallycool.block.DiatBlock;
+import net.mcreator.coolmodthatsactuallycool.block.DiamondEncrustedObsidianBlock;
 import net.mcreator.coolmodthatsactuallycool.CoolModThatsActuallyCoolModElements;
 
 import java.util.Set;
@@ -67,7 +67,7 @@ public class SoulDesertBiome extends CoolModThatsActuallyCoolModElements.ModElem
 			DefaultBiomeFeatures.addOres(this);
 			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, new CustomTreeFeature()
 					.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(SoulStoneBlock.block.getDefaultState()),
-							new SimpleBlockStateProvider(SoulStoneBlock.block.getDefaultState()))).baseHeight(150)
+							new SimpleBlockStateProvider(Blocks.AIR.getDefaultState()))).baseHeight(150)
 									.setSapling((net.minecraftforge.common.IPlantable) Blocks.JUNGLE_SAPLING).build())
 					.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 		}
@@ -145,9 +145,10 @@ public class SoulDesertBiome extends CoolModThatsActuallyCoolModElements.ModElem
 										BlockPos blockpos = new BlockPos(k1, genh, i2);
 										state = world.getBlockState(blockpos);
 										if (state.getBlock().isAir(state, world, blockpos) || state.getMaterial().blocksMovement()
-												|| state.isIn(BlockTags.LEAVES) || state.getBlock() == Blocks.SOUL_SAND.getDefaultState().getBlock()
-												|| state.getBlock() == SoulStoneBlock.block.getDefaultState().getBlock()) {
-											setTreeBlockState(changedBlocks, world, blockpos, SoulStoneBlock.block.getDefaultState(), bbox);
+												|| state.isIn(BlockTags.LEAVES)
+												|| state.getBlock() == DiamondEncrustedObsidianBlock.block.getDefaultState().getBlock()
+												|| state.getBlock() == Blocks.AIR.getDefaultState().getBlock()) {
+											setTreeBlockState(changedBlocks, world, blockpos, Blocks.AIR.getDefaultState(), bbox);
 										}
 									}
 								}
@@ -158,8 +159,8 @@ public class SoulDesertBiome extends CoolModThatsActuallyCoolModElements.ModElem
 							state = world.getBlockState(genhPos);
 							setTreeBlockState(changedBlocks, world, genhPos, SoulStoneBlock.block.getDefaultState(), bbox);
 							if (state.getBlock().isAir(state, world, genhPos) || state.getMaterial().blocksMovement() || state.isIn(BlockTags.LEAVES)
-									|| state.getBlock() == Blocks.SOUL_SAND.getDefaultState().getBlock()
-									|| state.getBlock() == SoulStoneBlock.block.getDefaultState().getBlock()) {
+									|| state.getBlock() == DiamondEncrustedObsidianBlock.block.getDefaultState().getBlock()
+									|| state.getBlock() == Blocks.AIR.getDefaultState().getBlock()) {
 							}
 						}
 						if (rand.nextInt(4) == 0 && height > 5) {
@@ -168,7 +169,7 @@ public class SoulDesertBiome extends CoolModThatsActuallyCoolModElements.ModElem
 									if (rand.nextInt(4 - hlevel) == 0) {
 										Direction dir = Direction.getOpposite();
 										setTreeBlockState(changedBlocks, world, position.add(dir.getXOffset(), height - 5 + hlevel, dir.getZOffset()),
-												DiatBlock.block.getDefaultState(), bbox);
+												DiamondEncrustedObsidianBlock.block.getDefaultState(), bbox);
 									}
 								}
 							}
@@ -184,17 +185,17 @@ public class SoulDesertBiome extends CoolModThatsActuallyCoolModElements.ModElem
 		}
 
 		private void addVines(IWorld world, BlockPos pos, Set<BlockPos> changedBlocks, MutableBoundingBox bbox) {
-			setTreeBlockState(changedBlocks, world, pos, Blocks.SOUL_SAND.getDefaultState(), bbox);
+			setTreeBlockState(changedBlocks, world, pos, DiamondEncrustedObsidianBlock.block.getDefaultState(), bbox);
 			int i = 5;
 			for (BlockPos blockpos = pos.down(); world.isAirBlock(blockpos) && i > 0; --i) {
-				setTreeBlockState(changedBlocks, world, blockpos, Blocks.SOUL_SAND.getDefaultState(), bbox);
+				setTreeBlockState(changedBlocks, world, blockpos, DiamondEncrustedObsidianBlock.block.getDefaultState(), bbox);
 				blockpos = blockpos.down();
 			}
 		}
 
 		private boolean canGrowInto(Block blockType) {
 			return blockType.getDefaultState().getMaterial() == Material.AIR || blockType == SoulStoneBlock.block.getDefaultState().getBlock()
-					|| blockType == SoulStoneBlock.block.getDefaultState().getBlock() || blockType == Blocks.SOUL_SAND.getDefaultState().getBlock()
+					|| blockType == Blocks.AIR.getDefaultState().getBlock() || blockType == Blocks.SOUL_SAND.getDefaultState().getBlock()
 					|| blockType == SoulStoneBlock.block.getDefaultState().getBlock();
 		}
 
