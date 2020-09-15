@@ -83,7 +83,7 @@ public class GlowlBlock extends CoolModThatsActuallyCoolModElements.ModElement {
 						.luminosity(15).density(10000).viscosity(10000)).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("glowl");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("glowl_flowing");
-		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.WATER)) {
+		elements.blocks.add(() -> new FlowingFluidBlock(still, Block.Properties.create(Material.LAVA)) {
 			@Override
 			public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
 				super.onEntityCollision(state, world, pos, entity);

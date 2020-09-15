@@ -35,7 +35,7 @@ public class GreenMushroomBlockBlock extends CoolModThatsActuallyCoolModElements
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 0.5f).lightValue(15));
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.WOOD).hardnessAndResistance(0.2f, 0.5f).lightValue(15));
 			setRegistryName("green_mushroom_block");
 		}
 

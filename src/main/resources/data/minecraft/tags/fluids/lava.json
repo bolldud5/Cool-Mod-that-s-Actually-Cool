@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "cool_mod_thats_actually_cool:glowl",
+    "cool_mod_thats_actually_cool:glowl_flowing"
+  ]
 }
