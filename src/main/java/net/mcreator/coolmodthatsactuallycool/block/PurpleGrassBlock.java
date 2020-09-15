@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -34,7 +35,7 @@ public class PurpleGrassBlock extends CoolModThatsActuallyCoolModElements.ModEle
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).lightValue(0));
+			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(0.7f, 3f).lightValue(6));
 			setRegistryName("purple_grass");
 		}
 
@@ -43,7 +44,7 @@ public class PurpleGrassBlock extends CoolModThatsActuallyCoolModElements.ModEle
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(Blocks.DIRT, (int) (1)));
 		}
 	}
 }

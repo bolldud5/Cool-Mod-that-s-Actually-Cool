@@ -45,6 +45,9 @@
       {
         "value": "void"
       }
-    ]
+    ],
+    "onRightClicked": {
+      "name": "GreenMushroomPlantRightClicked"
+    }
   }
 }
