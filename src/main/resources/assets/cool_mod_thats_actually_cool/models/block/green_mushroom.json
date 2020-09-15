@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "cool_mod_thats_actually_cool:blocks/green_mushroom",
+    "particle": "cool_mod_thats_actually_cool:blocks/green_mushroom"
+  }
+}

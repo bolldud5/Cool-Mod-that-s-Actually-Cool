@@ -631,6 +631,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "diamond_encrusted_obsidian"
+    },
+    {
+      "name": "GreenMushroom",
+      "type": "plant",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "green_mushroom"
+    },
+    {
+      "name": "GreenMushroomBlock",
+      "type": "block",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "green_mushroom_block"
     }
   ],
   "variable_elements": [],
@@ -693,6 +711,8 @@
       "block.cool_mod_thats_actually_cool.purple_grass": "Purple Grass",
       "item.minecraft.lingering_potion.effect.bloated_effect": "Lingering Bloated",
       "block.cool_mod_thats_actually_cool.angered_obsidian": "Angered Obsidian",
+      "block.cool_mod_thats_actually_cool.green_mushroom": "Green Mushroom",
+      "block.cool_mod_thats_actually_cool.green_mushroom_block": "Green Mushroom Block",
       "item.minecraft.potion.effect.bloated_effect": "Bloated",
       "item.cool_mod_thats_actually_cool.chicken_nugget": "Chicken Nugget",
       "block.cool_mod_thats_actually_cool.diat": "Diat",

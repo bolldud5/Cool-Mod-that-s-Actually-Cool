@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cool_mod_thats_actually_cool:blocks/green_mushroom_block",
+    "particle": "cool_mod_thats_actually_cool:blocks/green_mushroom_block"
+  }
+}
