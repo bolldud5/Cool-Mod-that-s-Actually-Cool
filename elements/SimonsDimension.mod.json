@@ -31,6 +31,9 @@
       },
       {
         "value": "CUSTOM:SoulDesert"
+      },
+      {
+        "value": "CUSTOM:GlowingBiome"
       }
     ],
     "worldGenType": "Normal world gen",

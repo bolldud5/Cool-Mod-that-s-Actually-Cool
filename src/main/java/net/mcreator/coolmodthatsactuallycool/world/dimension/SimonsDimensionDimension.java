@@ -131,7 +131,8 @@ public class SimonsDimensionDimension extends CoolModThatsActuallyCoolModElement
 		dimensionBiomes = new Biome[]{ForgeRegistries.BIOMES.getValue(new ResourceLocation("cool_mod_thats_actually_cool:ancient_ruins_biome")),
 				ForgeRegistries.BIOMES.getValue(new ResourceLocation("the_void")),
 				ForgeRegistries.BIOMES.getValue(new ResourceLocation("cool_mod_thats_actually_cool:soul_desert")),
-				ForgeRegistries.BIOMES.getValue(new ResourceLocation("cool_mod_thats_actually_cool:soul_desert")),};
+				ForgeRegistries.BIOMES.getValue(new ResourceLocation("cool_mod_thats_actually_cool:soul_desert")),
+				ForgeRegistries.BIOMES.getValue(new ResourceLocation("cool_mod_thats_actually_cool:glowing_biome")),};
 	}
 
 	@Override
