@@ -649,6 +649,33 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "green_mushroom_block"
+    },
+    {
+      "name": "Huge1GreenMushroom",
+      "type": "structure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "huge_1_green_mushroom"
+    },
+    {
+      "name": "Huge2GreenMushroom",
+      "type": "structure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "huge_2_green_mushroom"
+    },
+    {
+      "name": "Huge3GreenMushroom",
+      "type": "structure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "huge_3_green_mushroom"
     }
   ],
   "variable_elements": [],
@@ -699,8 +726,8 @@
       "item.cool_mod_thats_actually_cool.simons_dimension": "Ancient Key",
       "entity.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant",
       "entity.cool_mod_thats_actually_cool.hamster": "Hamster",
-      "item.cool_mod_thats_actually_cool.glowl_bucket": "Glowl Bucket",
       "block.cool_mod_thats_actually_cool.diamond_encrusted_obsidian": "Diamond Encrusted Obsidian",
+      "item.cool_mod_thats_actually_cool.glowl_bucket": "Glowl Bucket",
       "item.cool_mod_thats_actually_cool.hamster_pellet": "Hamster Pellet",
       "item.cool_mod_thats_actually_cool.iron_remnant": "Iron Remnant Spawn Egg",
       "block.cool_mod_thats_actually_cool.soul_stone": "Soul Stone",

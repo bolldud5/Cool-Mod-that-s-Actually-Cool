@@ -1,0 +1,24 @@
+{
+  "_fv": 10,
+  "_type": "structure",
+  "definition": {
+    "structure": "huge3greenmushroom",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First block",
+    "spawnProbability": 10000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 4,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": 0,
+    "spawnWorldTypes": [
+      "CUSTOM:SimonsDimension"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "CUSTOM:PurpleGrass"
+      }
+    ],
+    "restrictionBiomes": [],
+    "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK"
+  }
+}
