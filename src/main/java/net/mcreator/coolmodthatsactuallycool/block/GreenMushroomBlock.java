@@ -97,7 +97,7 @@ public class GreenMushroomBlock extends CoolModThatsActuallyCoolModElements.ModE
 		};
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
 			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("the_void")))
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("cool_mod_thats_actually_cool:glowing_biome")))
 				biomeCriteria = true;
 			if (!biomeCriteria)
 				continue;

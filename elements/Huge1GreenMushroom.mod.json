@@ -18,7 +18,11 @@
         "value": "CUSTOM:PurpleGrass"
       }
     ],
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:GlowingBiome"
+      }
+    ],
     "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK"
   }
 }

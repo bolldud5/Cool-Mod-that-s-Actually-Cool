@@ -43,7 +43,7 @@
     ],
     "restrictionBiomes": [
       {
-        "value": "void"
+        "value": "CUSTOM:GlowingBiome"
       }
     ],
     "onRightClicked": {
